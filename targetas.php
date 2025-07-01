@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información con Imágenes</title>
+
+        //
+    <link rel="stylesheet" href="src/output.css">
+    //
     <link rel="stylesheet" href="css/targetas.css">
 </head>
 <body>

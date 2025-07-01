@@ -7,6 +7,9 @@ const closeBtn = document.querySelector(".close");
 
 // Asignar evento a los elementos con la clase menu-item
 document.querySelectorAll('.menu-item').forEach(item => {
+    // Si el elemento contiene un <model-viewer>, no activar el modal
+    if (item.querySelector('model-viewer')) return;
+
     item.addEventListener('click', () => {
         const title = item.getAttribute('data-title');
         const imgSrc = item.getAttribute('data-image');

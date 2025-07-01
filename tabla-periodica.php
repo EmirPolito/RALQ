@@ -9,6 +9,10 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Cristian Barraza, Irving Esteban, Emir Polito">
     <title>RALQ</title>
+
+    //
+    <link rel="stylesheet" href="src/output.css">
+    //
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;700&family=Krub:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">

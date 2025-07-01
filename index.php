@@ -7,6 +7,10 @@
     <meta name="author" content="Cristian Barraza, Irving Esteban, Emir Polito">
     <title>RALQ</title>
 
+    //
+    <link rel="stylesheet" href="src/output.css">
+    //
+
     <!-- Fuentes y estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +79,7 @@
         camera-controls
         ar
         style="width: 100%; height: 450px; background-color: transparent;"
-        rotation-per-second="-10">
+        rotation-per-second="1">
     </model-viewer>
 
     <span style="
