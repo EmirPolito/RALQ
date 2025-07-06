@@ -8,7 +8,7 @@
     <title>RALQ</title>
 
     //
-    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="build/output.css">
     //
 
     <!-- Fuentes y estilos -->
@@ -70,19 +70,19 @@
             </div>
             <div class="imagen fade-in">
                 <!-- Modelo 3D giratorio -->
-<div class="imagen fade-in" style="position: relative;">
-    <model-viewer
-        id="modeloMetano"
-        src="modelos/metano.glb"
-        alt="Modelo de Metano"
-        auto-rotate
-        camera-controls
-        ar
-        style="width: 100%; height: 450px; background-color: transparent;"
-        rotation-per-second="1">
-    </model-viewer>
+                <div class="imagen fade-in" style="position: relative;">
+                    <model-viewer
+                        id="modeloMetano"
+                        src="modelos/metano.glb"
+                        alt="Modelo de Metano"
+                        auto-rotate
+                        camera-controls
+                        ar
+                        style="width: 100%; height: 450px; background-color: transparent;"
+                        rotation-per-second="1">
+                    </model-viewer>
 
-    <span style="
+                    <span style="
         position: absolute;
         bottom: 10px;
         left: 50%;
@@ -92,9 +92,9 @@
         border-radius: 8px;
         font-weight: bold;
         font-family: 'Krub', sans-serif;">
-        Metano (CH₄)
-    </span>
-</div>
+                        Metano (CH₄)
+                    </span>
+                </div>
 
 
             </div>
@@ -153,17 +153,20 @@
     </main>
 
     <!-- Footer -->
+
     <footer class="pie-pagina">
+
         <div class="contactos">
-            <p>
-                Colaboradores <br><br>
+            <p class="text-center">
+                Contacto: <br><br>
                 <a>Facebook: RALQ</a><br>
                 Correo: ralq.utsv@mail.com<br>
                 Teléfono: +123 456 789 <br><br>
             </p>
         </div>
+
         <div class="colaboradores">
-            <p>
+            <p class="text-center">
                 Colaboradores: <br><br>
                 Emir Polito Guevara <br>
                 Irving Esteban Molina Méndez <br>
@@ -171,6 +174,7 @@
                 2024 &copy; Todos los derechos reservados.
             </p>
         </div>
+
         <img src="img/utsv-log.png" alt="Imagen del Footer" class="imagen-footer">
     </footer>
 

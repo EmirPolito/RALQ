@@ -11,9 +11,10 @@ session_start();
     <meta name="author" content="Cristian Barraza, Irving Esteban, Emir Polito">
     <title>RALQ</title>
 
-        //
-    <link rel="stylesheet" href="src/output.css">
     //
+    <link rel="stylesheet" href="build/output.css">
+    //
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;700&family=Krub:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -69,42 +70,60 @@ session_start();
 
     <main>
         <h2>ELIGE UNO PARA VISUALIZARLO</h2>
-
         <div class="menu">
 
-            <!-- Asegúrate de incluir el script de model-viewer -->
-            <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-            <div class="menu-item bg-white rounded-xl shadow-lg p-4 max-w-sm">
-                <!-- Modelo 3D girando -->
-                <model-viewer
-                    src="modelos/agua.glb"
-                    alt="Modelo de Agua"
-                    auto-rotate
-                    camera-controls
-                    ar
-                    ar-modes="scene-viewer webxr quick-look"
-                    style="width: 100%; height: 300px; background-color: #f0f0f0; border-radius: 10px;">
-                </model-viewer>
 
-                <!-- Información -->
-                <h2 style="margin-top: 1rem; font-size: 1.2rem;">Agua (H₂O)</h2>
-                <p style="font-size: 0.9rem; color: #444;">
-                    Molécula compuesta por dos átomos de hidrógeno y uno de oxígeno. Es esencial para la vida y actúa como solvente universal en numerosos procesos químicos.
-                </p>
-
+            <div class="menu-item" style="background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; max-width: 400px; margin: auto;">
+                <!-- Visor 3D de Sketchfab (Agua) -->
+                <div class="sketchfab-embed-wrapper" style="width: 100%; height: 300px; border-radius: 10px; overflow: hidden; margin-bottom: 16px;">
+                    <iframe
+                        title="Agua"
+                        frameborder="0"
+                        allowfullscreen
+                        mozallowfullscreen="true"
+                        webkitallowfullscreen="true"
+                        allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking
+                        execution-while-out-of-viewport
+                        execution-while-not-rendered
+                        web-share
+                        src="https://sketchfab.com/models/4fca0b6bca7d44d1952be393ed179176/embed?autospin=1&autostart=1&annotations_visible=1&transparent=1&ui_hint=0"
+                        style="width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+                <!-- Información de la molécula -->
+                <h2 style="margin-top: 1rem; font-size: 1.2rem; font-weight: bold; color: #222;">Agua (H₂O)</h2>
                 <!-- Botón RA -->
                 <a href="https://mywebar.com/p/Project_1_m7gu6v0nsv" target="_blank"
-                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #1d4ed8; color: white; border-radius: 6px; text-decoration: none;">
-                    Experiencia en RA
+                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #5f9d5d; color: white; border-radius: 6px; text-decoration: none; font-size: 0.9rem;">
+                    Ver en Realidad Aumentada
                 </a>
             </div>
 
 
-            <div class="menu-item" data-title="Benciletanol (C₆H₅CH₂CH₂OH)" data-image="img/QR/estructuras/Benciletano.jpg" data-description="Compuesto orgánico utilizado en síntesis química y en la fabricación de productos farmacéuticos y fragancias.">
-                <img src="img/FOTO-QR/Estructuras-moleculares/Benciletanol.jpg" alt="Benciletanol">
-                <p>Benciletanol (C₆H₅CH₂CH₂OH)</p>
+            
+
+            <div class="menu-item" style="background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; max-width: 400px; margin: auto;">
+                <!-- Visor 3D de Sketchfab (Benciletanol) -->
+                <div class="sketchfab-embed-wrapper" style="width: 100%; height: 300px; border-radius: 10px; overflow: hidden; margin-bottom: 16px;">
+                    <iframe title="Benciletanol" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                        allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/c52c3d34063343d9ad2469c92594c977/embed?autospin=1&autostart=1&annotations_visible=1&transparent=1&ui_hint=0"
+                        style="width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+                <!-- Información de la molécula -->
+                <h2 style="margin-top: 1rem; font-size: 1.2rem; font-weight: bold; color: #222;">Benciletanol</h2>
+                <!-- Botón RA -->
+                <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank"
+                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #5f9d5d; color: white; border-radius: 6px; text-decoration: none; font-size: 0.9rem;">
+                    Ver en Realidad Aumentada
+                </a>
             </div>
+
+
 
 
             <div class="menu-item" style="background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; max-width: 400px; margin: auto;">
@@ -123,10 +142,11 @@ session_start();
 
                 <!-- Botón RA -->
                 <a href="https://mywebar.com/p/Project_0_lui6nsi9y3" target="_blank"
-                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #10b981; color: white; border-radius: 6px; text-decoration: none; font-size: 0.9rem;">
+                    style="display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #5f9d5d; color: white; border-radius: 6px; text-decoration: none; font-size: 0.9rem;">
                     Ver en Realidad Aumentada
                 </a>
             </div>
+
 
 
 
