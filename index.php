@@ -7,9 +7,7 @@
     <meta name="author" content="Cristian Barraza, Irving Esteban, Emir Polito">
     <title>RALQ</title>
 
-    //
     <link rel="stylesheet" href="build/output.css">
-    //
 
     <!-- Fuentes y estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +39,7 @@
 
         <!-- Sección de Novedades -->
         <section class="novedades fade-in">
-            <h2>HORA DE APRENDER</h2>
+            <h>HORA DE APRENDER</h>
             <div class="carrusel">
                 <!-- Cartas del carrusel (repetidas para efecto loop) -->
                 <div class="carta"><img src="img/carrusel/carrusel1.png" alt="Novedad 1">
@@ -63,11 +61,12 @@
         <!-- Sección de Texto e Imagen con modelo 3D -->
         <section class="texto-imagen">
             <div class="texto fade-in">
-                <h2>SUMÉRGETE EN LA REALIDAD AUMENTADA</h2>
-                <p>¡Laboratorios en la palma de tus manos!</p>
-                <p>Prepárate para vivir la mejor experiencia con instrumentaria renderizada,
-                    visualizada con RA (Realidad Aumentada) con tu propio smartphone.</p>
+                <h1 class="text-center">SUMÉRGETE EN LA REALIDAD AUMENTADA</h1>
+                <p class="text-center">¡Laboratorios en la palma de tus manos!</p>
+                <p class="text-center">Prepárate para vivir la mejor experiencia con instrumentaria renderizada,visualizada con RA (Realidad Aumentada) con tu propio smartphone.</p>
             </div>
+
+
             <div class="imagen fade-in">
                 <!-- Modelo 3D giratorio -->
                 <div class="imagen fade-in" style="position: relative;">
