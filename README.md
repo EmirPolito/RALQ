@@ -4,7 +4,7 @@
 
 <br>
 
-<img width="1897" height="877" alt="image" src="https://github.com/user-attachments/assets/0075e5f4-12f2-4c92-a2d7-3df04314e516" />
+![RALQ-2](https://github.com/EmirPolito/RALQ-2/assets/55882569/a504a464-4f4c-45c8-84ea-897b1f46b535)
 
 ## 🎯 Objetivo del Proyecto
 
