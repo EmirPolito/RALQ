@@ -1,10 +1,16 @@
-# Proyecto RALQ
+<h1 align="center">Proyecto RALQ</h1>
 
-**Proyecto RALQ** es una plataforma educativa interactiva diseñada para facilitar la enseñanza y el aprendizaje de la química. A través del uso de tecnologías web modernas, la plataforma ofrece a los estudiantes una forma innovadora de explorar conceptos químicos, permitiéndoles visualizar moléculas, instrumentos de laboratorio y estructuras de manera interactiva mediante **Modelos 3D** y **Realidad Aumentada (RA)**.
+<div align="center">
+
+[![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white)](https://www.php.net/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![Model Viewer](https://img.shields.io/badge/Model_Viewer-4285F4?logo=google&logoColor=white)](https://modelviewer.dev/)
+
+</div>
+<br />
+
+**El Proyecto RALQ** es una plataforma educativa interactiva diseñada para facilitar la enseñanza y el aprendizaje de la química. A través del uso de tecnologías web modernas, la plataforma ofrece a los estudiantes una forma innovadora de explorar conceptos químicos, permitiéndoles visualizar moléculas, instrumentos de laboratorio y estructuras de manera interactiva mediante **Modelos 3D** y **Realidad Aumentada (RA)**.
 
 <br>
 <img width="1600" height="739" alt="5614ed1c-f912-47fb-adf1-c2d6bc1c98ac" src="https://github.com/user-attachments/assets/fa93ccd9-5d17-4d97-9def-9b49a2cb83f0" />
-
 
 ## 🎯 Objetivo del Proyecto
 
