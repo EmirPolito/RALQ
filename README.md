@@ -7,7 +7,7 @@
 </div>
 <br />
 
-**El Proyecto RALQ** es una plataforma educativa interactiva diseñada para facilitar la enseñanza y el aprendizaje de la química. A través del uso de tecnologías web modernas, la plataforma ofrece a los estudiantes una forma innovadora de explorar conceptos químicos, permitiéndoles visualizar moléculas, instrumentos de laboratorio y estructuras de manera interactiva mediante **Modelos 3D** y **Realidad Aumentada (RA)**.
+**El Proyecto RALQ 2** es una plataforma educativa interactiva diseñada para facilitar la enseñanza y el aprendizaje de la química. A través del uso de tecnologías web modernas, la plataforma ofrece a los estudiantes una forma innovadora de explorar conceptos químicos, permitiéndoles visualizar moléculas, instrumentos de laboratorio y estructuras de manera interactiva mediante **Modelos 3D** y **Realidad Aumentada (RA)**.
 
 <br>
 <img width="1600" height="739" alt="5614ed1c-f912-47fb-adf1-c2d6bc1c98ac" src="https://github.com/user-attachments/assets/fa93ccd9-5d17-4d97-9def-9b49a2cb83f0" />
