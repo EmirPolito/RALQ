@@ -1,4 +1,4 @@
-<h1 align="center">Proyecto RALQ</h1>
+<h1 align="center">RALQ</h1>
 
 <div align="center">
 
