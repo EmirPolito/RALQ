@@ -12,6 +12,12 @@
 <br>
 <img width="1600" height="739" alt="5614ed1c-f912-47fb-adf1-c2d6bc1c98ac" src="https://github.com/user-attachments/assets/fa93ccd9-5d17-4d97-9def-9b49a2cb83f0" />
 
+<br>
+<div align="center">
+https://ralq-2.wasmer.app/
+<div/>
+<br>
+
 ## 🎯 Objetivo del Proyecto
 
 El objetivo principal de RALQ es acercar la ciencia a los estudiantes, eliminando la barrera de lo abstracto. Al integrar la tecnología de modelos tridimensionales en el navegador, los usuarios pueden rotar, hacer zoom y explorar visualmente elementos que normalmente solo verían en libros de texto.
