@@ -33,6 +33,15 @@ header {
     align-items: center;
     background-color: #f1f1f1;
     padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .header-left {
@@ -43,6 +52,12 @@ header {
 .logo {
     height: 70px;
     margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 50px;
+    }
 }
 
 
@@ -69,6 +84,8 @@ header {
 .header-right {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header nav a {

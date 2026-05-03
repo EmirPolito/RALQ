@@ -73,10 +73,10 @@ session_start();
 
   <main>
     <h2 style="text-align:center; margin-bottom: 2rem;">ELIGE UNO PARA VISUALIZARLO</h2>
-    <div class="menu" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; justify-items: center; row-gap: 80px;">
+        <div class="menu grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center px-4 py-8">
 
       <!-- Autoclave -->
-      <div class="menu-item" style="width: 340px; height: 380px; background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; position: relative; display: flex; flex-direction: column; transition: all 0.3s ease;">
+      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
         <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
 
         <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
@@ -107,7 +107,7 @@ session_start();
 
 
       <!-- Campana de extracción -->
-      <div class="menu-item" style="width: 340px; height: 380px; background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; position: relative; display: flex; flex-direction: column; transition: all 0.3s ease;">
+      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
         <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
 
         <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
@@ -138,7 +138,7 @@ session_start();
 
 
       <!-- Centrifugadora -->
-      <div class="menu-item" style="width: 340px; height: 380px; background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; position: relative; display: flex; flex-direction: column; transition: all 0.3s ease;">
+      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
         <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
 
         <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
@@ -169,7 +169,7 @@ session_start();
 
 
       <!-- Incubadora -->
-      <div class="menu-item" style="width: 340px; height: 380px; background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; position: relative; display: flex; flex-direction: column; transition: all 0.3s ease;">
+      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
         <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
 
         <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
@@ -200,7 +200,7 @@ session_start();
 
 
       <!-- Placa calefactora -->
-      <div class="menu-item" style="width: 340px; height: 380px; background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; position: relative; display: flex; flex-direction: column; transition: all 0.3s ease;">
+      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
         <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
 
         <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
@@ -231,7 +231,7 @@ session_start();
 
 
       <!-- Soporte universal -->
-      <div class="menu-item" style="width: 340px; height: 380px; background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 16px; position: relative; display: flex; flex-direction: column; transition: all 0.3s ease;">
+      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
         <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
 
         <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">

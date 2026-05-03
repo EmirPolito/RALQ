@@ -27,13 +27,7 @@ body {
 }
 /* --------------------- ENCABEZADO --------------------- */
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--gris-claro);
-    padding: 10px 20px;
-}
+/* header styles handled by Tailwind classes in menu.php */
 
 .header-left {
     display: flex;
@@ -43,6 +37,12 @@ header {
 .logo {
     height: 70px;
     margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 50px;
+    }
 }
 
 
@@ -72,6 +72,8 @@ header {
     display: flex;
     align-items: center;
     gap: 10px; /* Espaciado entre los botones */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .header-right p {
@@ -79,6 +81,13 @@ header {
     color: var(--verdeobscuro);
     margin-right: 5px; /* Espacio antes del botón */
     font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    .header-right p {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }
 
 .header-right a {
@@ -163,12 +172,13 @@ header nav a:hover {
     background-size: cover; /* Asegura que cubra el área */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    width: 100vw; /* Ocupa todo el ancho de la pantalla */
-    height: 300px; /* Ajusta la altura según lo necesites */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    min-height: 200px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 40px 20px;
 }
 
 
@@ -178,7 +188,13 @@ header nav a:hover {
     border-radius: 5px; /* Bordes ligeramente redondeados */
     margin: 0; /* Elimina el margen por defecto */
     text-align: center; /* Centra el texto */
-    font-size: 2em; /* Un tamaño de texto más grande */
+    font-size: 3rem; /* Un tamaño de texto más grande */
+}
+
+@media (max-width: 768px) {
+    .encabezado-delgado h1 {
+        font-size: 2.2rem;
+    }
 }
 
 

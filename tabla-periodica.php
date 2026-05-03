@@ -65,8 +65,8 @@ session_start();
     </section>
 
     <main>
-
-        <div class="periodic">
+        <div class="w-full overflow-x-auto pb-8">
+            <div class="periodic min-w-[1200px] px-4">
             <div class="periodic-row">
                 <div class="cell">
                     <div class="element" class="type-4 cat-3">
@@ -2017,6 +2017,7 @@ session_start();
                 </ul>
             </div>
             <div style="clear:both;"></div>
+            </div>
         </div>
     </main>
 

@@ -26,93 +26,136 @@ session_start();
 </head>
 
 
-<body>
-    <header>
+<body class="bg-gray-50 min-h-screen flex flex-col font-['Krub']">
+    <header class="bg-white border-b border-gray-100 px-3 md:px-6 py-3 md:py-4 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2">
+            <!-- Left: Volver + Logo -->
+            <div class="flex items-center gap-2 md:gap-6 flex-shrink-0">
+                <a href="index.php" class="hover:scale-110 transition-transform flex-shrink-0">
+                    <img src="img/logos/volver.png" alt="Volver" class="h-6 md:h-10 object-contain">
+                </a>
+                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-10 md:h-16 flex-shrink-0 object-contain">
+            </div>
 
-        <div class="header-left">
-            <a href="menu.php" class="volver-boton"></a>
-            <img src="img/logo_ralq_color-removebg-preview.png" class="logo">
-        </div>
-
-        <div class="header-right">
-            <p>¡Bienvenido :)</p>
-            <a href="https://www.facebook.com/share/1AnZW5VRF9/"><img src="img/contctos/logofacebook.png"
-                    class="icono-red"></a>
-            <a href="https://wa.me/message/ZB3EHUSWCMQFE1?src=qr"><img src="img/contctos/logowhats.png"
-                    class="icono-red"></a>
-            <a href="https://mail.google.com/mail/?view=cm&to=ralq.utsv@gmail.com&su=Consulta&body=Hola, quisiera más información."
-                target="_blank" target="_blank"><img src="img/contctos/logogmail.png" class="icono-red"></a>
-
-            <!-- <nav> -->
-            <!-- Icono de Usuario -->
-            <!-- <div class="user-menu">
-
-                    <img src="img/user.jpg" class="user-icon" onclick="toggleMenu()">
-                    <div class="user-dropdown" id="userDropdown">
-                        <p><strong><?php echo $_SESSION['user_email']; ?></strong></p>
-                        <a class="boton-a" href="index.php">Cerrar sesión</a>
+            <!-- Right: Welcome + Socials + User -->
+            <div class="flex items-center gap-2 md:gap-8 overflow-hidden">
+                <!-- Welcome + Socials (Compact on mobile) -->
+                <div class="flex items-center gap-2 md:gap-4 flex-shrink min-w-0">
+                    <div class="flex flex-col md:flex-row md:items-center leading-tight text-right md:text-left flex-shrink-0">
+                        <p class="text-teal-600 font-bold text-[11px] md:text-lg whitespace-nowrap">¡Bienvenido</p>
+                        <p class="text-teal-600 font-bold text-[11px] md:text-lg md:ml-1">:)</p>
+                    </div>
+                    <div class="flex gap-1 md:gap-2 flex-shrink-0">
+                        <a href="#" class="hover:opacity-70 transition-opacity">
+                            <img src="img/contctos/logofacebook.png" class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="Facebook">
+                        </a>
+                        <a href="#" class="hover:opacity-70 transition-opacity">
+                            <img src="img/contctos/logowhats.png" class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="WhatsApp">
+                        </a>
+                        <a href="#" class="hover:opacity-70 transition-opacity">
+                            <img src="img/contctos/logogmail.png" class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="Gmail">
+                        </a>
                     </div>
                 </div>
-                <script src="js/usuario.js"></script> -->
-            <!-- Icono de Usuario -->
-            <!-- </nav> -->
 
-            <nav>
-                <div class="user-menu">
-                    <img src="img/user.jpg" class="user-icon" onclick="toggleMenu()" alt="Usuario">
-                    <div class="user-dropdown" id="userDropdown" style="width: max-content; max-width: 200px;">
-                        <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 10px;"
+                <!-- User Icon -->
+                <div class="relative user-menu flex-shrink-0">
+                    <img src="img/user.jpg"
+                        class="user-icon w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-teal-500 cursor-pointer shadow-lg object-cover"
+                        onclick="toggleMenu()" alt="Usuario">
+                    <div id="userDropdown"
+                        class="hidden absolute right-0 mt-4 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 z-50">
+                        <p class="text-gray-900 font-bold mb-4 truncate"
                             title="<?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>">
-                            <strong>
-                                <?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>
-                            </strong>
+                            <?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>
                         </p>
-                        <a class="boton-a text-center " href="index.php">Ir a Home</a>
+                        <a href="index.php"
+                            class="block w-full py-3 bg-teal-500 text-white text-center rounded-xl font-bold hover:bg-teal-600 transition-colors">Cerrar
+                            Sesión</a>
                     </div>
                 </div>
-                <script src="js/usuario.js"></script>
-            </nav>
-
-
+            </div>
         </div>
     </header>
 
+    <section class="relative h-64 md:h-96 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="img/fondomenu.png" alt="Fondo" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-teal-900/40 backdrop-blur-[2px]"></div>
+        </div>
+        <h1 class="relative z-10 text-4xl md:text-6xl lg:text-7xl font-bold text-white text-center px-6 drop-shadow-2xl uppercase tracking-wider"
+            style="font-family: 'Poppins', sans-serif;">
+            Aprende y <span class="text-teal-400">Estudia</span> sobre...
+        </h1>
+    </section>
 
-    <div class="encabezado-delgado">
-        <h1>APRENDE Y ESTUDIA SOBRE...</h1>
-    </div>
-
-    <main>
-        <div class="menu">
-            <!-- Estructuras Moleculares → izquierda -->
-            <a href="estructuras-mol.php" class="menu-item fade-in">
-                <img src="img/img-menu/3 (2).png" alt="Estructuras Moleculares">
+    <main class="flex-grow py-20 px-6">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            <!-- Estructuras Moleculares -->
+            <a href="estructuras-mol.php"
+                class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <img src="img/img-menu/3 (2).png" alt="Estructuras Moleculares"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <p class="text-white text-2xl font-bold">Explorar Estructuras</p>
+                </div>
             </a>
 
-            <!-- Laboratorios → centro -->
-            <a href="laboratorios.php" class="menu-item fade-in">
-                <img src="img/img-menu/tuslabs.png" alt="Instrumentaria de Laboratorio">
+            <!-- Laboratorios -->
+            <a href="laboratorios.php"
+                class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <img src="img/img-menu/tuslabs.png" alt="Laboratorios"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <p class="text-white text-2xl font-bold">Visitar Laboratorios</p>
+                </div>
             </a>
 
-            <!-- Tabla periódica → derecha -->
-            <a href="tabla-periodica.php" class="menu-item fade-in">
-                <img src="img/img-menu/tablape.png" alt="Elementos Químicos">
+            <!-- Tabla periódica -->
+            <a href="tabla-periodica.php"
+                class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <img src="img/img-menu/tablape.png" alt="Tabla Periódica"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <p class="text-white text-2xl font-bold">Ver Elementos</p>
+                </div>
             </a>
 
-            <!-- Los demás ítems -->
-            <a href="https://www.youtube.com/watch?v=cubEOJ_gz3w" class="menu-item fade-in">
-                <img src="img/img-menu/4 (2).png" alt="Explora tu Laboratorio">
+            <!-- Otros links -->
+            <a href="https://www.youtube.com/watch?v=cubEOJ_gz3w" target="_blank"
+                class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <img src="img/img-menu/4 (2).png" alt="Explora"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <p class="text-white text-2xl font-bold">Ver Video RA</p>
+                </div>
             </a>
+
             <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__TR___tUOTI4WkFURU0yR1RZQkdLTFU4OFpZWjgyTS4u"
-                class="menu-item fade-in">
-                <img src="img/img-menu/5.png" alt="Evalúate">
+                target="_blank"
+                class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <img src="img/img-menu/5.png" alt="Evalúate"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <p class="text-white text-2xl font-bold">Evaluar Conocimientos</p>
+                </div>
             </a>
-            <a href="https://wordwall.net/es/resource/13254497/elementos-de-laboratorio" class="menu-item fade-in">
-                <img src="img/img-menu/6.png" alt="Nuevo botón">
+
+            <a href="https://wordwall.net/es/resource/13254497/elementos-de-laboratorio" target="_blank"
+                class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <img src="img/img-menu/6.png" alt="Juegos"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <p class="text-white text-2xl font-bold">Actividades Lúdicas</p>
+                </div>
             </a>
         </div>
-
-
     </main>
 
 
