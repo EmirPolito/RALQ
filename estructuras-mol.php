@@ -24,33 +24,31 @@ session_start();
     <link rel="stylesheet" href="css/user-icon.css">
     <link rel="stylesheet" href="css/QRN.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        header {
+            display: block !important;
+            background-color: white !important;
+            padding: 0 !important;
+            gap: 0 !important;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 min-h-screen flex flex-col font-['Krub']">
-    <!-- Header -->
-    <header class="bg-white border-b border-gray-100 px-6 py-4 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-[1500px] mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-6">
-                <a href="menu.php" class="hover:scale-110 transition-transform">
-                    <img src="img/logos/volver.png" alt="Volver" class="h-8 md:h-10">
-                </a>
-                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16">
+    <!-- HEADER -->
+    <header id="mainHeader"
+        class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
+        <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2 px-4 md:px-8 py-5 md:py-7 w-full">
+            <!-- Logo -->
+            <div class="flex items-center flex-shrink-0">
+                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
             </div>
 
-            <div class="flex items-center gap-4 md:gap-8">
-                <div class="hidden md:flex items-center gap-4">
-                    <a href="https://publuu.com/flip-book/821912/1808843" target="_blank" class="px-6 py-2 bg-teal-50 text-teal-600 rounded-full font-bold hover:bg-teal-100 transition-colors">Ayuda</a>
-                </div>
-
-                <div class="relative user-menu">
-                    <img src="img/user.jpg" class="user-icon w-12 h-12 rounded-full border-2 border-teal-500 cursor-pointer shadow-lg" onclick="toggleMenu()" alt="Usuario">
-                    <div id="userDropdown" class="hidden absolute right-0 mt-4 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 z-50">
-                        <p class="text-gray-900 font-bold mb-4 truncate" title="<?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>">
-                            <?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>
-                        </p>
-                        <a href="index.php" class="block w-full py-3 bg-teal-500 text-white text-center rounded-xl font-bold hover:bg-teal-600 transition-colors">Cerrar Sesión</a>
-                    </div>
-                </div>
+            <!-- Back Button -->
+            <div class="flex items-center">
+                <a href="menu.php" class="hover:scale-110 transition-transform flex items-center group">
+                    <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain">
+                </a>
             </div>
         </div>
     </header>
@@ -62,11 +60,13 @@ session_start();
             <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
         </div>
         <div class="relative z-10 max-w-4xl px-6 text-center text-white space-y-6">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-widest drop-shadow-2xl" style="font-family: 'Poppins', sans-serif;">
-                Estructuras <span class="text-teal-400">Moleculares</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-widest drop-shadow-2xl"
+                style="font-family: 'Poppins', sans-serif;">
+                Estructuras Moleculares
             </h1>
             <p class="text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto opacity-90">
-                Explora la disposición atómica y los enlaces químicos en tres dimensiones para comprender la esencia de la materia.
+                Explora la disposición atómica y los enlaces químicos en tres dimensiones para comprender la esencia de
+                la materia.
             </p>
         </div>
     </section>
@@ -74,19 +74,24 @@ session_start();
     <!-- Content -->
     <main class="flex-grow py-20 px-6 bg-white">
         <div class="max-w-[1500px] mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 uppercase tracking-wider">Elige una para visualizarla</h2>
-            
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 uppercase tracking-wider">Elige
+                una para visualizarla</h2>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <!-- Agua -->
-                <div class="group bg-gray-50 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col min-h-[500px]">
+                <div
+                    class="group bg-gray-50 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col min-h-[500px]">
                     <div class="relative flex-grow">
-                        <model-viewer src="modelos/agua.glb" alt="Modelo de agua" auto-rotate camera-controls ar class="w-full h-64 bg-transparent"></model-viewer>
-                        <button onclick="toggleFullInfo(this)" class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        <model-viewer src="modelos/agua.glb" alt="Modelo de agua" auto-rotate camera-controls ar
+                            class="w-full h-64 bg-transparent"></model-viewer>
+                        <button onclick="toggleFullInfo(this)"
+                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
                     </div>
 
                     <div class="card-content mt-8 text-center flex flex-col flex-grow">
                         <h3 class="text-3xl font-bold text-gray-900 mb-6">Agua (H₂O)</h3>
-                        <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank" class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank"
+                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
                             Ver en RA
                         </a>
                     </div>
@@ -102,15 +107,19 @@ session_start();
                 </div>
 
                 <!-- Benciletanol -->
-                <div class="group bg-gray-50 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col min-h-[500px]">
+                <div
+                    class="group bg-gray-50 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col min-h-[500px]">
                     <div class="relative flex-grow">
-                        <model-viewer src="modelos/benciletanol.glb" alt="Benciletanol" auto-rotate camera-controls ar class="w-full h-64 bg-transparent"></model-viewer>
-                        <button onclick="toggleFullInfo(this)" class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        <model-viewer src="modelos/benciletanol.glb" alt="Benciletanol" auto-rotate camera-controls ar
+                            class="w-full h-64 bg-transparent"></model-viewer>
+                        <button onclick="toggleFullInfo(this)"
+                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
                     </div>
 
                     <div class="card-content mt-8 text-center flex flex-col flex-grow">
                         <h3 class="text-3xl font-bold text-gray-900 mb-6">Benciletanol</h3>
-                        <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank" class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank"
+                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
                             Ver en RA
                         </a>
                     </div>
@@ -126,15 +135,19 @@ session_start();
                 </div>
 
                 <!-- Cafeína -->
-                <div class="group bg-gray-50 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col min-h-[500px]">
+                <div
+                    class="group bg-gray-50 rounded-[2.5rem] p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col min-h-[500px]">
                     <div class="relative flex-grow">
-                        <model-viewer src="modelos/cafeina.glb" alt="Cafeína" auto-rotate camera-controls ar class="w-full h-64 bg-transparent"></model-viewer>
-                        <button onclick="toggleFullInfo(this)" class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        <model-viewer src="modelos/cafeina.glb" alt="Cafeína" auto-rotate camera-controls ar
+                            class="w-full h-64 bg-transparent"></model-viewer>
+                        <button onclick="toggleFullInfo(this)"
+                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
                     </div>
 
                     <div class="card-content mt-8 text-center flex flex-col flex-grow">
                         <h3 class="text-3xl font-bold text-gray-900 mb-6">Cafeína</h3>
-                        <a href="https://mywebar.com/p/Project_0_lui6nsi9y3" target="_blank" class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        <a href="https://mywebar.com/p/Project_0_lui6nsi9y3" target="_blank"
+                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
                             Ver en RA
                         </a>
                     </div>
@@ -153,13 +166,16 @@ session_start();
     </main>
 
     <!-- FAQ Accordion -->
-    <section class="py-24 bg-gray-50 px-6">
-        <div class="max-w-4xl mx-auto space-y-6">
+    <section class="py-24 bg-gray-50 px-5">
+        <div class="max-w-7xl mx-auto space-y-6">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center uppercase">Información Detallada</h2>
-            
+
+            <!-- Question 1 -->
             <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="w-full px-8 py-6 text-left flex justify-between items-center group" onclick="toggleAccordion(this)">
-                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Qué son las estructuras moleculares?</span>
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Qué son
+                        las estructuras moleculares?</span>
                     <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
                 </button>
                 <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
@@ -171,45 +187,88 @@ session_start();
                 </div>
             </div>
 
+            <!-- Question 2 -->
             <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="w-full px-8 py-6 text-left flex justify-between items-center group" onclick="toggleAccordion(this)">
-                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">Importancia de la visualización 3D</span>
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span
+                        class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">Importancia
+                        de la visualización 3D</span>
                     <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
                 </button>
                 <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
-                    <p>La visualización 3D permite entender la estereoquímica y cómo la forma de una molécula determina su función biológica o reactividad química.</p>
+                    <p>La visualización 3D permite entender la estereoquímica y cómo la forma de una molécula determina
+                        su función biológica o reactividad química.</p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Cómo
+                        afectan los enlaces a la forma molecular?</span>
+                    <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
+                </button>
+                <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
+                    <p>Los enlaces (simples, dobles o triples) y los pares de electrones no compartidos crean
+                        repulsiones que definen los ángulos específicos, siguiendo la teoría de repulsión de pares
+                        electrónicos de la capa de valencia (VSEPR).</p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Qué es
+                        la polaridad molecular?</span>
+                    <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
+                </button>
+                <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
+                    <p>Es la distribución asimétrica de la carga eléctrica en una molécula. Depende tanto de la
+                        electronegatividad de los átomos como de la geometría de la estructura.</p>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Por qué
+                        es importante en la industria?</span>
+                    <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
+                </button>
+                <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
+                    <p>En farmacología y petroquímica, conocer la estructura exacta permite diseñar catalizadores más
+                        eficientes y medicamentos que encajen perfectamente en los receptores celulares.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#1e293b] text-white py-20 px-6 mt-auto">
-        <div class="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 items-center">
-            <div class="text-center md:text-left space-y-6">
-                <h4 class="text-3xl font-bold text-teal-400">Contacto</h4>
-                <div class="space-y-4 text-lg text-gray-300">
-                    <p>Facebook: <a href="https://www.facebook.com/share/1AnZW5VRF9/" class="hover:text-white transition-colors">RALQ</a></p>
-                    <p>Correo: <a href="mailto:ralq.utsv@gmail.com" class="hover:text-white transition-colors">ralq.utsv@gmail.com</a></p>
-                    <p>Teléfono: <a href="tel:+123456789" class="hover:text-white transition-colors">+123 456 789</a></p>
-                </div>
+    <!-- FOOTER -->
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
+        <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
+            <div class="text-center">
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Contacto</h4>
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                    Facebook: <a href="https://www.facebook.com/share/1AnZW5VRF9/" class="hover:underline">RALQ</a><br>
+                    Correo: <a href="mailto:ralq.utsv@gmail.com" class="hover:underline">ralq.utsv@gmail.com</a><br>
+                    Teléfono: <a href="tel:+123456789" class="hover:underline">+123 456 789</a>
+                </p>
             </div>
-
-            <div class="flex flex-col items-center gap-6">
-                <img src="img/utsv-log.png" alt="UTSV Logo" class="h-32 object-contain filter brightness-110">
-                <div class="w-24 h-1 bg-teal-500 rounded-full"></div>
-            </div>
-
-            <div class="text-center md:text-right space-y-6">
-                <h4 class="text-3xl font-bold text-teal-400">Creadores</h4>
-                <div class="space-y-2 text-lg text-gray-300">
-                    <p>Emir Polito Guevara</p>
-                    <p>Irving Esteban Molina Méndez</p>
-                    <p>Cristian Daniel Barraza Hernández</p>
-                </div>
+            <div class="text-center">
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Creadores</h4>
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                    Emir Polito Guevara<br>
+                    Irving Esteban Molina Méndez<br>
+                    Cristian Daniel Barraza Hernández
+                </p>
             </div>
         </div>
-        <div class="max-w-[1500px] mx-auto border-t border-white/10 mt-16 pt-8 text-center text-gray-400">
+        <div class="border-t border-gray-400 mt-12"></div>
+        <div class="mt-6 text-center text-lg text-gray-200">
             2024 &copy; Todos los derechos reservados.
         </div>
     </footer>
@@ -231,28 +290,23 @@ session_start();
             icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
         }
 
-        function toggleMenu() {
-            const dropdown = document.getElementById('userDropdown');
-            dropdown.classList.toggle('hidden');
-        }
+        // Header scroll behavior
+        let lastScrollTop = 0;
+        const header = document.getElementById('mainHeader');
 
-        // Close dropdown when clicking outside
-        window.onclick = function(event) {
-            if (!event.target.matches('.user-icon')) {
-                const dropdowns = document.getElementsByClassName("user-dropdown");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    let openDropdown = dropdowns[i];
-                    if (!openDropdown.classList.contains('hidden')) {
-                        openDropdown.classList.add('hidden');
-                    }
-                }
-                // Also check by ID for the Tailwind version
-                const tailwindDropdown = document.getElementById('userDropdown');
-                if (tailwindDropdown && !tailwindDropdown.classList.contains('hidden') && !event.target.closest('.user-menu')) {
-                    tailwindDropdown.classList.add('hidden');
-                }
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up or at top
+                header.style.transform = 'translateY(0)';
             }
-        }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
     </script>
     <script src="js/animaciones-index.js"></script>
 </body>

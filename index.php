@@ -22,25 +22,76 @@
 
     <!-- Librería para mostrar modelos 3D -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <style>
+        /* Estilos para el carrusel infinito en desktop */
+        @media (min-width: 1024px) {
+            .carrusel-track {
+                animation: scroll-infinite 20s linear infinite;
+            }
+
+            .carrusel-track:hover {
+                animation-play-state: paused;
+            }
+        }
+
+        @keyframes scroll-infinite {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-33.333%);
+            }
+        }
+    </style>
 </head>
 
 
 
 <body class="relative">
     <!-- Header flotante ancho completo -->
-    <header id="floating-header"
-        class="fixed top-0 left-0 w-full bg-white/100 backdrop-blur-md shadow-md z-50 transition-transform duration-300">
-        <div
-            class="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-3 md:py-5 gap-4 md:gap-0">
-            <!-- Logo a la izquierda -->
-            <img src="img/logo_ralq_color-removebg-preview.png" alt="Logo" class="h-12 md:h-20 flex-shrink-0">
-            <!-- Links a la derecha -->
-            <div class="hidden md:flex items-center space-x-3 md:space-x-5">
-                <a href="menu.php"
-                    class="px-4 md:px-7 py-2 md:py-4 bg-[#2b3951] text-white rounded-lg font-medium text-base md:text-xl hover:bg-[#1f2740] transition-colors">¡Empieza
-                    a usar la app!</a>
+    <header id="mainHeader"
+        class="bg-white border-b border-gray-100 px-4 md:px-8 py-5 md:py-7 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
+
+        <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2">
+
+            <!-- Logo -->
+            <div class="flex items-center flex-shrink-0">
+
+                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
+
             </div>
+
+            <!-- Right -->
+            <div class="flex items-center gap-3 md:gap-8">
+
+                <!-- Welcome + Socials -->
+                <div class="hidden sm:flex items-center gap-3 md:gap-4">
+
+                    <div class="flex gap-2">
+
+                        <a href="#" class="hover:opacity-70 transition-opacity">
+                            <img src="img/contctos/logofacebook.png"
+                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="Facebook">
+                        </a>
+
+                        <a href="#" class="hover:opacity-70 transition-opacity">
+                            <img src="img/contctos/logowhats.png"
+                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="WhatsApp">
+                        </a>
+
+                        <a href="#" class="hover:opacity-70 transition-opacity">
+                            <img src="img/contctos/logogmail.png"
+                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="Gmail">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
+
     </header>
 
 
@@ -59,13 +110,14 @@
             class="contenido-hero absolute inset-0 flex flex-col justify-center items-center text-center px-8 md:px-16 fade-in">
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 drop-shadow-2xl leading-tight"
                 style="font-family: 'Poppins', sans-serif;">
-                Visualiza el <span class="text-teal-400">Futuro</span> de la Química </h1>
+                Visualiza el futuro de la Química
+            </h1>
             <p
                 class="text-xl md:text-2xl lg:text-3xl text-gray-200 drop-shadow-md max-w-3xl mb-8 font-light leading-relaxed">
                 Descubre una experiencia educativa inmersiva con Realidad Aumentada de última generación.
             </p>
             <a href="menu.php"
-                class="px-10 py-5 bg-teal-500 text-white rounded-full font-semibold text-lg hover:bg-teal-400 transition-all shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+                class="px-10 py-5 bg-white text-black rounded-full font-semibold text-lg hover:bg-gray-400 transition-all shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
                 ¡Empieza a usar la app!
             </a>
         </div>
@@ -92,224 +144,355 @@
 
 
 
-<main class="contenido-principal overflow-x-hidden">
-    <!-- Sección de Novedades (Carousel) -->
-    <section class="novedades fade-in text-center py-12 md:py-24 bg-white">
-        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-10 uppercase tracking-[0.2em]">Novedades</h2>
-        <div class="carrusel-container relative w-full overflow-hidden">
-            <div class="carrusel-track flex items-center">
-                <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                    <img src="img/carrusel/carrusel1.png" alt="Novedad 1" class="!h-[100px] md:!h-[200px]">
-                    <p class="!text-[0.9rem] md:!text-[1.6rem]">Descubre tus laboratorios</p>
-                </div>
-                <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                    <img src="img/carrusel/carrusel2.png" alt="Novedad 2" class="!h-[100px] md:!h-[200px]">
-                    <p class="!text-[0.9rem] md:!text-[1.6rem]">Infinidad de instrumentos RA</p>
-                </div>
-                <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                    <img src="img/carrusel/carrusel3.png" alt="Novedad 3" class="!h-[100px] md:!h-[200px]">
-                    <p class="!text-[0.9rem] md:!text-[1.6rem]">Tus conocimientos aumentarán</p>
-                </div>
-                <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                    <img src="img/carrusel/carrusel4.png" alt="Novedad 4" class="!h-[100px] md:!h-[200px]">
-                    <p class="!text-[0.9rem] md:!text-[1.6rem]">Solo usa tu smartphone</p>
-                </div>
-                <!-- Duplicados -->
-                <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                    <img src="img/carrusel/carrusel1.png" alt="Novedad 1" class="!h-[100px] md:!h-[200px]">
-                    <p class="!text-[0.9rem] md:!text-[1.6rem]">Descubre tus laboratorios</p>
-                </div>
-            </div>
-        </div>
-    </section>
- 
-    <!-- Sección 1: Estructuras Moleculares -->
-    <section class="bg-[#0f172a] text-white">
-        <div class="max-w-[1500px] mx-auto px-6 py-20 lg:py-32">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Texto -->
-                <div class="space-y-12 lg:pr-12">
-                    <div class="text-center lg:text-left space-y-4">
-                        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight" style="font-family: 'Poppins', sans-serif;">
-                            Estructuras en <span class="text-teal-400">3D</span>
-                        </h2>
-                        <div class="w-24 h-1.5 bg-teal-500 rounded-full mx-auto lg:mx-0"></div>
+    <main class="contenido-principal overflow-x-hidden">
+        <!-- Sección de Novedades (Carousel) - CARRUSEL INFINITO -->
+        <section class="novedades fade-in text-center py-12 md:py-24 bg-white">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-10 uppercase tracking-[0.2em]">Novedades</h2>
+            <div class="carrusel-container relative w-full overflow-hidden">
+                <!-- Items triplicados para loop infinito en desktop -->
+                <div class="carrusel-track flex items-center">
+                    <!-- Set 1 -->
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel1.png" alt="Novedad 1" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Descubre tus laboratorios</p>
                     </div>
- 
-                    <div class="grid grid-cols-1 gap-10">
-                        <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
-                            <div class="p-4 bg-white/5 border border-white/10 rounded-2xl text-teal-400 backdrop-blur-md">
-                                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl lg:text-3xl font-bold text-white mb-2">Interacción Total</h3>
-                                <p class="text-gray-400 text-xl lg:text-xl leading-relaxed">Manipula cada átomo y enlace para entender la química desde adentro.</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
-                            <div class="p-4 bg-white/5 border border-white/10 rounded-2xl text-teal-400 backdrop-blur-md">
-                                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl lg:text-3xl font-bold text-white mb-2">Fidelidad Científica</h3>
-                                <p class="text-gray-400 text-xl lg:text-xl leading-relaxed">Modelos validados para una representación exacta de las geometrías moleculares.</p>
-                            </div>
-                        </div>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel2.png" alt="Novedad 2" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Infinidad de instrumentos RA</p>
                     </div>
-                </div>
-                <!-- Modelo -->
-                <div class="relative flex justify-center items-center">
-                    <div class="absolute inset-0 bg-teal-500/10 rounded-full blur-[100px] scale-150"></div>
-                    <model-viewer src="modelos/cafeina.glb" alt="Cafeína" auto-rotate camera-controls ar 
-                        class="w-full h-80 md:h-[500px] lg:h-[600px] bg-transparent">
-                    </model-viewer>
-                    <div class="absolute bottom-4 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-2xl text-lg lg:text-xl font-bold text-white">
-                        Cafeína <span class="text-teal-400 ml-2">C₈H₁₀N₄O₂</span>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel3.png" alt="Novedad 3" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Tus conocimientos aumentarán</p>
+                    </div>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel4.png" alt="Novedad 4" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Solo usa tu smartphone</p>
+                    </div>
+                    <!-- Set 2 (duplicado para loop infinito) -->
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel1.png" alt="Novedad 1" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Descubre tus laboratorios</p>
+                    </div>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel2.png" alt="Novedad 2" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Infinidad de instrumentos RA</p>
+                    </div>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel3.png" alt="Novedad 3" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Tus conocimientos aumentarán</p>
+                    </div>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel4.png" alt="Novedad 4" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Solo usa tu smartphone</p>
+                    </div>
+                    <!-- Set 3 (duplicado para loop infinito) -->
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel1.png" alt="Novedad 1" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Descubre tus laboratorios</p>
+                    </div>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel2.png" alt="Novedad 2" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Infinidad de instrumentos RA</p>
+                    </div>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel3.png" alt="Novedad 3" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Tus conocimientos aumentarán</p>
+                    </div>
+                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                        <img src="img/carrusel/carrusel4.png" alt="Novedad 4" class="!h-[100px] md:!h-[200px]">
+                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Solo usa tu smartphone</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
- 
-    <!-- Sección 2: Instrumental -->
-    <section class="bg-white text-gray-900">
-        <div class="max-w-[1500px] mx-auto px-6 py-20 lg:py-32">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <!-- Modelo (Primero en laptop para efecto espejo) -->
-                <div class="relative flex justify-center items-center lg:order-1">
-                    <div class="absolute inset-0 bg-teal-500/5 rounded-full blur-[100px] scale-150"></div>
-                    <model-viewer src="modelos/gradilla.glb" alt="Gradilla" auto-rotate camera-controls ar 
-                        class="w-full h-80 md:h-[500px] lg:h-[600px] bg-transparent">
-                    </model-viewer>
-                    <div class="absolute bottom-4 bg-white shadow-2xl border border-gray-100 px-6 py-3 rounded-2xl text-lg lg:text-xl font-bold flex items-center gap-3">
-                        <div class="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
-                        Gradilla UTSV
-                    </div>
-                </div>
-                <!-- Texto -->
-                <div class="space-y-12 lg:pl-12 lg:order-2">
-                    <div class="text-center lg:text-left space-y-4">
-                        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight" style="font-family: 'Poppins', sans-serif;">
-                            Instrumental <span class="text-teal-600 italic">RA</span>
-                        </h2>
-                        <div class="w-24 h-1.5 bg-teal-600 rounded-full mx-auto lg:mx-0"></div>
-                    </div>
- 
-                    <div class="grid grid-cols-1 gap-10">
-                        <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
-                            <div class="p-4 bg-gray-50 border border-gray-100 rounded-2xl text-teal-600">
-                                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Dominio Técnico</h3>
-                                <p class="text-gray-600 text-xl lg:text-xl leading-relaxed">Familiarízate con el equipo crítico antes de manipularlo en el mundo real.</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
-                            <div class="p-4 bg-gray-50 border border-gray-100 rounded-2xl text-teal-600">
-                                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Seguridad Total</h3>
-                                <p class="text-gray-600 text-xl lg:text-xl leading-relaxed">Aprende los protocolos de uso correcto sin peligro de roturas o accidentes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
- 
-    <!-- Sección 3: Multimedia -->
-    <section class="bg-gray-100 py-20 lg:py-40 px-6">
-        <div class="max-w-[1500px] mx-auto space-y-32">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl">
-                    <video src="video/5752738-uhd_3840_2160_30fps.mp4" autoplay loop muted playsinline class="w-full aspect-video object-cover"></video>
-                </div>
-                <div class="space-y-8 text-center lg:text-left">
-                    <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Acelera tu <span class="text-teal-600">Aprendizaje</span></h3>
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
-                            <span class="w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
-                            Retención de conceptos mejorada en un 90%.
-                        </div>
-                        <div class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
-                            <span class="w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
-                            Identificación de instrumental en segundos.
-                        </div>
-                    </div>
-                </div>
-            </div>
- 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="lg:order-2 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                    <video src="video/8326252-uhd_3840_2160_30fps (1).mp4" autoplay loop muted playsinline class="w-full aspect-video object-cover"></video>
-                </div>
-                <div class="lg:order-1 space-y-8 text-center lg:text-left">
-                    <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Confianza en el <span class="text-teal-600">Laboratorio</span></h3>
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
-                            <span class="w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
-                            Entorno virtual de prácticas libre de riesgos.
-                        </div>
-                        <div class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
-                            <span class="w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
-                            Gana seguridad antes de la práctica real.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+        </section>
 
-    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #233c53ff;">
-        <div class="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+        <!-- Sección 1: Estructuras Moleculares -->
+        <section class="bg-[#0f172a] text-white">
+            <div class="max-w-[1400px] mx-auto px-6 py-20 lg:py-32">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-            <!-- Contacto -->
-            <div class="text-center md:text-left">
-                <h4 class="text-3xl font-bold mb-6 text-center">Contacto</h4>
-                <p class="text-lg leading-relaxed text-center">
-                    Facebook: <a href="#" class="hover:underline">RALQ</a><br>
-                    Correo: <a href="mailto:ralq.utsv@mail.com" class="hover:underline">ralq.utsv@mail.com</a><br>
-                    Teléfono: <a href="tel:+123456789" class="hover:underline">+123 456 789</a>
+                    <!-- Texto -->
+                    <div class="flex flex-col gap-10 lg:pr-8">
+                        <!-- Eyebrow -->
+                        <span
+                            class="inline-flex items-center gap-2 self-center lg:self-start text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 001.5 2.122m-1.5-2.122c.252.023.502.05.75.082M15 3.104c.251.023.501.05.75.082m0 0A24.301 24.301 0 0118.75 8.5m-3-5.396a24.301 24.301 0 00-4.5 0" />
+                            </svg>
+                            Química Interactiva
+                        </span>
+
+                        <!-- Título -->
+                        <div class="text-center lg:text-left">
+                            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+                                style="font-family:'Poppins',sans-serif;">
+                                Estructuras en <span class="text-teal-400">3D</span>
+                            </h2>
+                            <div class="mt-4 w-16 h-1 bg-teal-500 rounded-full mx-auto lg:mx-0"></div>
+                        </div>
+
+                        <!-- Features -->
+                        <div class="flex flex-col gap-8">
+                            <div
+                                class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                                <div class="shrink-0 p-3 rounded-2xl bg-white/5 border border-white/10 text-teal-400">
+                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">Interacción Total</h3>
+                                    <p class="text-gray-400 text-base lg:text-lg leading-relaxed">Manipula cada átomo y
+                                        enlace para entender la química desde adentro.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                                <div class="shrink-0 p-3 rounded-2xl bg-white/5 border border-white/10 text-teal-400">
+                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">Fidelidad Científica</h3>
+                                    <p class="text-gray-400 text-base lg:text-lg leading-relaxed">Modelos validados para
+                                        una representación exacta de las geometrías moleculares.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modelo 3D -->
+                    <div class="relative flex justify-center items-center">
+                        <!-- Glow de fondo -->
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-teal-500/10 blur-[80px]"></div>
+                        </div>
+
+                        <!-- Viewer -->
+                        <model-viewer src="modelos/cafeina.glb" alt="Cafeína" auto-rotate camera-controls ar
+                            style="width:100%; height:420px; background:transparent;" class="lg:h-[560px]">
+                        </model-viewer>
+
+                        <!-- Badge -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none whitespace-nowrap
+                    bg-[#0f172a]/80 backdrop-blur-xl border border-white/10
+                    px-5 py-2.5 rounded-2xl text-sm lg:text-base font-semibold text-white">
+                            Cafeína <span class="text-teal-400 ml-1.5">C₈H₁₀N₄O₂</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección 2: Instrumental RA -->
+        <section class="bg-white text-gray-900">
+            <div class="max-w-[1400px] mx-auto px-6 py-20 lg:py-32">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                    <!-- Modelo 3D (izquierda en desktop, abajo en móvil) -->
+                    <div class="relative flex justify-center items-center order-last lg:order-none">
+                        <!-- Glow de fondo -->
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-teal-500/10 blur-[80px]"></div>
+                        </div>
+
+                        <!-- Viewer -->
+                        <model-viewer src="modelos/gradilla.glb" alt="Gradilla" auto-rotate camera-controls ar
+                            style="width:100%; height:420px; background:transparent;" class="lg:h-[560px]">
+                        </model-viewer>
+
+                        <!-- Badge -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none whitespace-nowrap
+                    bg-white shadow-lg border border-gray-100
+                    px-5 py-2.5 rounded-2xl text-sm lg:text-base font-semibold text-gray-900
+                    flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-teal-500 animate-pulse shrink-0"></span>
+                            Gradilla UTSV
+                        </div>
+                    </div>
+
+                    <!-- Texto (derecha en desktop) -->
+                    <div class="flex flex-col gap-10 lg:pl-8">
+                        <!-- Eyebrow -->
+                        <span
+                            class="inline-flex items-center gap-2 self-center lg:self-start text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full bg-teal-50 border border-teal-200 text-teal-700">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5m0 9V18A2.25 2.25 0 0118 20.25h-1.5m-9 0H6A2.25 2.25 0 013.75 18v-1.5M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            Realidad Aumentada
+                        </span>
+
+                        <!-- Título -->
+                        <div class="text-center lg:text-left">
+                            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+                                style="font-family:'Poppins',sans-serif;">
+                                Instrumental <span class="text-teal-600 italic">RA</span>
+                            </h2>
+                            <div class="mt-4 w-16 h-1 bg-teal-600 rounded-full mx-auto lg:mx-0"></div>
+                        </div>
+
+                        <!-- Features -->
+                        <div class="flex flex-col gap-8">
+                            <div
+                                class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                                <div class="shrink-0 p-3 rounded-2xl bg-gray-50 border border-gray-100 text-teal-600">
+                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-1">Dominio Técnico</h3>
+                                    <p class="text-gray-500 text-base lg:text-lg leading-relaxed">Familiarízate con el
+                                        equipo crítico antes de manipularlo en el mundo real.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                                <div class="shrink-0 p-3 rounded-2xl bg-gray-50 border border-gray-100 text-teal-600">
+                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-1">Seguridad Total</h3>
+                                    <p class="text-gray-500 text-base lg:text-lg leading-relaxed">Aprende los protocolos
+                                        de uso correcto sin peligro de roturas o accidentes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Multimedia - VIDEOS MÁS HACIA LOS LADOS -->
+        <section class="bg-gray-100 py-20 lg:py-40 px-2 lg:px-8">
+            <!-- max-w más amplio para que ocupe más espacio horizontal -->
+            <div class="max-w-[1600px] mx-auto space-y-32">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <video src="video/5752738-uhd_3840_2160_30fps.mp4" autoplay loop muted playsinline
+                            class="w-full aspect-video object-cover"></video>
+                    </div>
+                    <div class="space-y-8 text-center lg:text-left">
+                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Acelera tu <span
+                                class="text-teal-600">Aprendizaje</span></h3>
+                        <div class="space-y-6">
+                            <div
+                                class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
+                                <span
+                                    class="w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
+                                Retención de conceptos mejorada en un 90%.
+                            </div>
+                            <div
+                                class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
+                                <span
+                                    class="w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
+                                Identificación de instrumental en segundos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="lg:order-2 rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <video src="video/8326252-uhd_3840_2160_30fps (1).mp4" autoplay loop muted playsinline
+                            class="w-full aspect-video object-cover"></video>
+                    </div>
+                    <div class="lg:order-1 space-y-8 text-center lg:text-left">
+                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Confianza en el <span
+                                class="text-teal-600">Laboratorio</span></h3>
+                        <div class="space-y-6">
+                            <div
+                                class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
+                                <span
+                                    class="w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
+                                Entorno virtual de prácticas libre de riesgos.
+                            </div>
+                            <div
+                                class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
+                                <span
+                                    class="w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
+                                Gana seguridad antes de la práctica real.
+                            </div>
+                        </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
+
+        <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
+
+            <div class="text-center">
+
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">
+                    Contacto
+                </h4>
+
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+
+                    Facebook:
+                    <a href="#" class="hover:underline">RALQ</a><br>
+
+                    Correo:
+                    <a href="mailto:ralq.utsv@mail.com" class="hover:underline">
+                        ralq.utsv@mail.com
+                    </a><br>
+
+                    Teléfono:
+                    <a href="tel:+123456789" class="hover:underline">
+                        +123 456 789
+                    </a>
+
                 </p>
-            </div>
-            <!-- Logo centrado -->
-            <div class="flex justify-center items-center">
-                <img src="img/utsv-log.png" alt="UTSV Logo" class="h-24 md:h-36 object-contain">
             </div>
 
             <!-- Creadores -->
-            <div class="text-center md:text-right">
-                <h4 class="text-3xl font-bold mb-6 text-center">Creadores</h4>
-                <p class="text-lg leading-relaxed text-center">
+            <div class="text-center">
+
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">
+                    Creadores
+                </h4>
+
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed">
                     Emir Polito Guevara<br>
                     Irving Esteban Molina Méndez<br>
                     Cristian Daniel Barraza Hernández
                 </p>
+
             </div>
+
         </div>
-        <!-- Línea separadora -->
+
         <div class="border-t border-gray-400 mt-12"></div>
 
-        <!-- Derechos -->
         <div class="mt-6 text-center text-lg text-gray-200">
             2024 &copy; Todos los derechos reservados.
         </div>
+
     </footer>
 
     <!-- Animaciones -->
     <script src="js/animaciones-index.js"></script>
-    </body>
+</body>
 
 </html>

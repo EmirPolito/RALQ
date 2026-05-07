@@ -21,36 +21,32 @@ session_start();
     <link rel="stylesheet" href="css/user-icon.css">
     <link rel="stylesheet" href="css/QRN.css">
     <link rel="stylesheet" href="css/tablaperiodica.css">
+    <style>
+        header { 
+            display: block !important; 
+            background-color: white !important; 
+            padding: 0 !important;
+            gap: 0 !important;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
+    <!-- HEADER -->
+    <header id="mainHeader" class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
+        <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2 px-4 md:px-8 py-5 md:py-7 w-full">
+            <!-- Logo -->
+            <div class="flex items-center flex-shrink-0">
+                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
+            </div>
 
-        <div class="header-left">
-            <a href="menu.php" class="volver-boton">
-                <img src="img/logos/volver.png" alt="Volver">
-            </a>
-            <img src="img/logo_ralq_color-removebg-preview.png" class="logo">
-        </div>
-
-        <div class="header-right">
-            <nav>
-                <!-- <a href="https://publuu.com/flip-book/789518/1745350">Ayuda</a> -->
-                <!-- <a href="#">Servicios</a>
-                    <a href="#">Blog</a> -->
-
-                <!-- Icono de Usuario -->
-                <div class="user-menu">
-                    <img src="img/user.jpg" class="user-icon" onclick="toggleMenu()">
-                    <div class="user-dropdown" id="userDropdown">
-                        <p><strong><?php echo $_SESSION['user_email']; ?></strong></p>
-                        <a class="boton-a" href="index.php">Cerrar sesión</a>
-                    </div>
-                </div>
-                <script src="js/usuario.js"></script>
-                <!-- Icono de Usuario -->
-            </nav>
+            <!-- Back Button -->
+            <div class="flex items-center">
+                <a href="menu.php" class="hover:scale-110 transition-transform flex items-center group">
+                    <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain">
+                </a>
+            </div>
         </div>
     </header>
 
@@ -2021,44 +2017,51 @@ session_start();
         </div>
     </main>
 
-
-<!-- 
+    <!-- FOOTER -->
     <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-
-            <!-- Contacto -->
-            <div class="text-center md:text-left">
-                <h4 class="text-3xl font-bold mb-6 text-center">Contacto</h4>
-                <p class="text-lg leading-relaxed text-center">
-                    Facebook: <a href="#" class="hover:underline">RALQ</a><br>
-                    Correo: <a href="mailto:ralq.utsv@mail.com" class="hover:underline">ralq.utsv@mail.com</a><br>
+        <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
+            <div class="text-center">
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Contacto</h4>
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                    Facebook: <a href="https://www.facebook.com/share/1AnZW5VRF9/" class="hover:underline">RALQ</a><br>
+                    Correo: <a href="mailto:ralq.utsv@gmail.com" class="hover:underline">ralq.utsv@gmail.com</a><br>
                     Teléfono: <a href="tel:+123456789" class="hover:underline">+123 456 789</a>
                 </p>
             </div>
-            <!-- Logo centrado -->
-            <div class="flex justify-center items-center">
-                <img src="img/utsv-log.png" alt="UTSV Logo" class="h-32 md:h-36 object-contain">
-            </div>
-
-            <!-- Creadores -->
-            <div class="text-center md:text-right">
-                <h4 class="text-3xl font-bold mb-6 text-center">Creadores</h4>
-                <p class="text-lg leading-relaxed text-center">
+            <div class="text-center">
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Creadores</h4>
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed">
                     Emir Polito Guevara<br>
                     Irving Esteban Molina Méndez<br>
                     Cristian Daniel Barraza Hernández
                 </p>
             </div>
         </div>
-        <!-- Línea separadora -->
         <div class="border-t border-gray-400 mt-12"></div>
-
-        <!-- Derechos -->
         <div class="mt-6 text-center text-lg text-gray-200">
             2024 &copy; Todos los derechos reservados.
         </div>
     </footer>
 
+    <script>
+        // Header scroll behavior
+        let lastScrollTop = 0;
+        const header = document.getElementById('mainHeader');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up or at top
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+    </script>
 </body>
 
-</html> 
+</html>

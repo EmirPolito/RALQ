@@ -22,29 +22,31 @@ session_start();
     <link rel="stylesheet" href="css/laboratorios.css">
     <link rel="stylesheet" href="css/user-icon.css">
     <link rel="stylesheet" href="css/QRN.css">
+    <style>
+        header {
+            display: block !important;
+            background-color: white !important;
+            padding: 0 !important;
+            gap: 0 !important;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 min-h-screen flex flex-col font-['Krub']">
-    <!-- Header -->
-    <header class="bg-white border-b border-gray-100 px-6 py-4 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-[1500px] mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-6">
-                <a href="menu.php" class="hover:scale-110 transition-transform">
-                    <img src="img/logos/volver.png" alt="Volver" class="h-8 md:h-10">
-                </a>
-                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16">
+    <!-- HEADER -->
+    <header id="mainHeader"
+        class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
+        <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2 px-4 md:px-8 py-5 md:py-7 w-full">
+            <!-- Logo -->
+            <div class="flex items-center flex-shrink-0">
+                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
             </div>
 
-            <div class="flex items-center gap-4 md:gap-8">
-                <div class="relative user-menu">
-                    <img src="img/user.jpg" class="user-icon w-12 h-12 rounded-full border-2 border-teal-500 cursor-pointer shadow-lg" onclick="toggleMenu()" alt="Usuario">
-                    <div id="userDropdown" class="hidden absolute right-0 mt-4 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 z-50">
-                        <p class="text-gray-900 font-bold mb-4 truncate" title="<?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>">
-                            <?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>
-                        </p>
-                        <a href="index.php" class="block w-full py-3 bg-teal-500 text-white text-center rounded-xl font-bold hover:bg-teal-600 transition-colors">Cerrar Sesión</a>
-                    </div>
-                </div>
+            <!-- Back Button -->
+            <div class="flex items-center">
+                <a href="menu.php" class="hover:scale-110 transition-transform flex items-center group">
+                    <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain">
+                </a>
             </div>
         </div>
     </header>
@@ -56,11 +58,13 @@ session_start();
             <div class="absolute inset-0 bg-teal-900/60 backdrop-blur-[3px]"></div>
         </div>
         <div class="relative z-10 max-w-5xl px-6 text-center text-white space-y-8">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter drop-shadow-2xl" style="font-family: 'Poppins', sans-serif;">
-                Laboratorios <span class="text-teal-400">Químicos</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter drop-shadow-2xl"
+                style="font-family: 'Poppins', sans-serif;">
+                Laboratorios Químicos
             </h1>
             <p class="text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto opacity-95">
-                Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras instalaciones virtuales y domina los protocolos de seguridad.
+                Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras instalaciones
+                virtuales y domina los protocolos de seguridad.
             </p>
         </div>
     </section>
@@ -69,27 +73,36 @@ session_start();
     <main class="flex-grow py-24 px-6 bg-white">
         <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             <!-- Química General -->
-            <a href="quimica-general.php" class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-                <img src="img/laboratorios/labo1.png" alt="Química General" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
+            <a href="quimica-general.php"
+                class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+                <img src="img/laboratorios/labo1.png" alt="Química General"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Química General</h3>
                     <p class="text-teal-300 font-medium uppercase tracking-widest text-sm">Entrar al Laboratorio</p>
                 </div>
             </a>
 
             <!-- Análisis Instrumental -->
-            <a href="analisis-instrumental.php" class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-                <img src="img/laboratorios/labo2.png" alt="Análisis Instrumental" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
+            <a href="analisis-instrumental.php"
+                class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+                <img src="img/laboratorios/labo2.png" alt="Análisis Instrumental"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Análisis Instrumental</h3>
                     <p class="text-teal-300 font-medium uppercase tracking-widest text-sm">Explorar Instrumentos</p>
                 </div>
             </a>
 
             <!-- Plantas Químicas -->
-            <a href="plantas-quimicas.php" class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-                <img src="img/laboratorios/labo3.png" alt="Plantas Químicas" class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
+            <a href="plantas-quimicas.php"
+                class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+                <img src="img/laboratorios/labo3.png" alt="Plantas Químicas"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Plantas Químicas</h3>
                     <p class="text-teal-300 font-medium uppercase tracking-widest text-sm">Visitar Plantas</p>
                 </div>
@@ -97,50 +110,118 @@ session_start();
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-[#1e293b] text-white py-20 px-6 mt-auto">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 items-center">
-            <div class="text-center md:text-left space-y-6">
-                <h4 class="text-3xl font-bold text-teal-400">Contacto</h4>
-                <div class="space-y-4 text-lg text-gray-300">
-                    <p>Facebook: <a href="https://www.facebook.com/share/1AnZW5VRF9/" class="hover:text-white transition-colors">RALQ</a></p>
-                    <p>Correo: <a href="mailto:ralq.utsv@gmail.com" class="hover:text-white transition-colors">ralq.utsv@gmail.com</a></p>
-                    <p>Teléfono: <a href="tel:+123456789" class="hover:text-white transition-colors">+123 456 789</a></p>
+    <!-- FAQ Accordion -->
+    <section class="py-24 bg-gray-50 px-6">
+        <div class="max-w-7xl mx-auto space-y-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center uppercase">Información Detallada</h2>
+
+            <!-- Question 1 -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Qué
+                        normas de seguridad se deben seguir?</span>
+                    <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
+                </button>
+                <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Uso obligatorio de bata blanca de algodón.</li>
+                        <li>No ingerir alimentos ni bebidas dentro del área.</li>
+                        <li>Identificar las salidas de emergencia y estaciones de lavado.</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="flex flex-col items-center gap-6">
-                <img src="img/utsv-log.png" alt="UTSV Logo" class="h-32 object-contain filter brightness-110">
-                <div class="w-24 h-1 bg-teal-500 rounded-full"></div>
+            <!-- Question 2 -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Cómo
+                        acceder a los laboratorios virtuales?</span>
+                    <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
+                </button>
+                <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
+                    <p>Puedes acceder a través de los enlaces directos en la sección superior. Cada laboratorio cuenta
+                        con una guía interactiva para facilitar la navegación.</p>
+                </div>
             </div>
 
-            <div class="text-center md:text-right space-y-6">
-                <h4 class="text-3xl font-bold text-teal-400">Creadores</h4>
-                <div class="space-y-2 text-lg text-gray-300">
-                    <p>Emir Polito Guevara</p>
-                    <p>Irving Esteban Molina Méndez</p>
-                    <p>Cristian Daniel Barraza Hernández</p>
+            <!-- Question 3 -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Qué
+                        equipos están disponibles?</span>
+                    <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
+                </button>
+                <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
+                    <p>Contamos con espectrofotómetros, balanzas analíticas de alta precisión, reactores químicos y
+                        equipos de destilación avanzada, todos representados fielmente en el entorno virtual.</p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Es
+                        necesario equipo de protección personal (EPP)?</span>
+                    <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
+                </button>
+                <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
+                    <p>Sí, aunque sea un entorno virtual, fomentamos la cultura del EPP: lentes de seguridad, guantes de
+                        nitrilo y calzado cerrado son fundamentales en la práctica real.</p>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="w-full px-8 py-6 text-left flex justify-between items-center group"
+                    onclick="toggleAccordion(this)">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">¿Cómo se
+                        reportan incidentes?</span>
+                    <span class="text-3xl text-teal-500 transform transition-transform duration-300">+</span>
+                </button>
+                <div class="hidden px-8 pb-8 text-xl text-gray-600 leading-relaxed">
+                    <p>Cualquier derrame o anomalía debe ser reportada inmediatamente al encargado del laboratorio
+                        siguiendo el protocolo de seguridad establecido en la bitácora.</p>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto border-t border-white/10 mt-16 pt-8 text-center text-gray-400">
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
+        <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
+            <div class="text-center">
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Contacto</h4>
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                    Facebook: <a href="https://www.facebook.com/share/1AnZW5VRF9/" class="hover:underline">RALQ</a><br>
+                    Correo: <a href="mailto:ralq.utsv@gmail.com" class="hover:underline">ralq.utsv@gmail.com</a><br>
+                    Teléfono: <a href="tel:+123456789" class="hover:underline">+123 456 789</a>
+                </p>
+            </div>
+            <div class="text-center">
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Creadores</h4>
+                <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+                    Emir Polito Guevara<br>
+                    Irving Esteban Molina Méndez<br>
+                    Cristian Daniel Barraza Hernández
+                </p>
+            </div>
+        </div>
+        <div class="border-t border-gray-400 mt-12"></div>
+        <div class="mt-6 text-center text-lg text-gray-200">
             2024 &copy; Todos los derechos reservados.
         </div>
     </footer>
-
     <script>
-        function toggleMenu() {
-            const dropdown = document.getElementById('userDropdown');
-            dropdown.classList.toggle('hidden');
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.matches('.user-icon')) {
-                const tailwindDropdown = document.getElementById('userDropdown');
-                if (tailwindDropdown && !tailwindDropdown.classList.contains('hidden') && !event.target.closest('.user-menu')) {
-                    tailwindDropdown.classList.add('hidden');
-                }
-            }
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            content.classList.toggle('hidden');
+            const icon = button.querySelector('span:last-child');
+            icon.textContent = content.classList.contains('hidden') ? '+' : '−';
+            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
         }
     </script>
     <script src="js/animaciones-index.js"></script>
