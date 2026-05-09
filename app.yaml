@@ -1,0 +1,4 @@
+kind: wasmer.io/App.v0
+name: ralq-2
+owner: emirpolito
+package: .

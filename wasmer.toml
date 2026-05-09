@@ -1,0 +1,16 @@
+[package]
+name = "emirpolito/ralq-2"
+version = "0.1.0"
+description = "RALQ 2 educational platform"
+
+[[module]]
+name = "php"
+source = "php/php:8.2"
+
+[[command]]
+name = "run"
+module = "php"
+runner = "https://webc.org/runner/wasi"
+
+[fs]
+"/var/www/html" = "."
