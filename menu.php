@@ -78,7 +78,7 @@ session_start();
 
                     <!-- DROPDOWN -->
                     <div id="userDropdown"
-                        class="hidden absolute right-0 mt-4 w-60 bg-white rounded-2xl shadow-2xl border border-gray-100 p-5 z-50">
+                        class="hidden absolute right-0 mt-9 w-60 bg-white rounded-2xl shadow-2xl border border-gray-100 p-5 z-50">
 
                         <p class="text-gray-900 font-bold mb-4 truncate"
                             title="<?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>">
@@ -88,7 +88,7 @@ session_start();
                         </p>
 
                         <a href="index.php"
-                            class="block w-full py-3 bg-teal-500 text-white text-center rounded-xl font-bold hover:bg-teal-600 transition-colors">
+                            class="block w-full py-1 bg-red-600 text-white text-center rounded-2xl font-bold hover:bg-red-500 transition-colors">
 
                             Salir
 
@@ -101,30 +101,42 @@ session_start();
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="relative h-64 md:h-96 flex items-center justify-center overflow-hidden">
+    <section class="relative overflow-hidden min-h-[240px] md:min-h-[470px] flex items-end md:items-start">
+        <!-- Imagen de fondo -->
+        <img src="img/fondomenu.png" alt="Laboratorio de análisis"
+            class="absolute inset-0 w-full h-full object-cover object-center">
 
-        <div class="absolute inset-0 z-0">
+        <!-- Overlay oscuro -->
+        <div class="absolute inset-0"></div>
 
-            <img src="img/fondomenu.png" alt="Fondo" class="w-full h-full object-cover" fetchpriority="high"
-                decoding="sync">
+        <!-- Contenido -->
+        <div class="relative z-10 w-full px-2.5 md:px-16 pb-10 pt-28 md:pb-0 md:pt-56">
 
-            <div class="absolute inset-0 bg-teal-900/40 backdrop-blur-[2px]"></div>
+            <div class="max-w-5xl mx-auto md:text-center">
 
+                <span class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-3">
+                    Explora las areas de RALQ
+                </span>
+
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
+                    Aprende y Estudia sobre...
+                </h2>
+
+                <p
+                    class="text-white text-base font-normal md:text-2xl leading-relaxed border-l-4 md:border-0 border-white pl-3 md:pl-0">
+                    Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras
+                    instalaciones virtuales y domina los protocolos de seguridad.
+                </p>
+
+            </div>
         </div>
-
-        <h1 class="relative z-10 text-4xl md:text-6xl lg:text-7xl font-bold text-white text-center px-6 drop-shadow-2xl uppercase tracking-wider"
-            style="font-family: 'Poppins', sans-serif;">
-
-            Aprende y Estudia sobre...
-
-        </h1>
     </section>
+
 
     <!-- MAIN -->
     <main class="flex-grow py-20 px-10">
 
-        <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-20">
+        <div class="max-w-[1250px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-20">
 
             <!-- CARD -->
             <a href="estructuras-mol.php"
