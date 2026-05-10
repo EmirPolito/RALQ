@@ -32,6 +32,8 @@ session_start();
             gap: 0 !important;
         }
     </style>
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="img/laboratorios/Moleculas.jpg">
 </head>
 
 <body class="bg-gray-50 min-h-screen flex flex-col font-['Krub']">
@@ -53,18 +55,30 @@ session_start();
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="img/laboratorios/Moleculas.jpg" alt="Estructuras" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+    <section
+        class="relative flex flex-col-reverse md:flex-row items-center gap-0 md:gap-10 p-8 md:p-16 bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden">
+        <!-- Imagen -->
+        <div class="w-full md:w-5/12">
+            <div class="relative group">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000">
+                </div>
+
+                <img src="img/laboratorios/Moleculas.jpg" alt="Laboratorio de análisis"
+                    class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96">
+            </div>
         </div>
-        <div class="relative z-10 max-w-4xl px-6 text-center text-white space-y-6">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-widest drop-shadow-2xl"
-                style="font-family: 'Poppins', sans-serif;">
+        <!-- Texto -->
+        <div class="w-full md:w-7/12 flex flex-col justify-center">
+            <span class="text-blue-600 font-medium tracking-wider text-sm mb-2 uppercase">
+                Area de
+            </span>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 tracking-tight">
                 Estructuras Moleculares
-            </h1>
-            <p class="text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto opacity-90">
+            </h2>
+
+            <p class="text-slate-600 text-base md:text-2xl leading-relaxed mb-8 border-l-4 border-blue-500 pl-3">
                 Explora la disposición atómica y los enlaces químicos en tres dimensiones para comprender la esencia de
                 la materia.
             </p>
@@ -77,187 +91,308 @@ session_start();
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 uppercase tracking-wider">Elige
                 una para visualizarla</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-14">
+
                 <!-- Agua -->
                 <div
                     class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                    <div class="relative flex-grow">
+
+                    <div class="relative flex-grow flex items-center justify-center">
+
                         <model-viewer src="modelos/agua.glb" alt="Modelo de agua" auto-rotate camera-controls ar
-                            class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                            class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                         <button onclick="toggleFullInfo(this)"
-                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                            class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                            i
+
+                        </button>
+
                     </div>
 
-                    <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Agua (H₂O)</h3>
+                    <div class="card-content mt-auto text-center pt-4">
+
+                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                            Agua (H₂O)
+                        </h3>
+
                         <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank"
-                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                            class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
                             Ver en RA
+
                         </a>
+
                     </div>
 
-                    <div
-                        class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                        <h3 class="text-lg md:text-2xl font-bold text-gray-900">Agua (H₂O)</h3>
+                    <div class="full-info hidden mt-auto text-center pt-4">
+
+                        <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                            Agua (H₂O)
+                        </h3>
+
                         <div class="text-lg text-gray-600 space-y-2">
                             <p><strong>Fórmula:</strong> H₂O</p>
                             <p><strong>Estado:</strong> Líquido a 25°C</p>
                             <p><strong>Peso molecular:</strong> 18.015 g/mol</p>
                         </div>
+
                     </div>
+
                 </div>
 
                 <!-- Benciletanol -->
                 <div
                     class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                    <div class="relative flex-grow">
+
+                    <div class="relative flex-grow flex items-center justify-center">
+
                         <model-viewer src="modelos/benciletanol.glb" alt="Benciletanol" auto-rotate camera-controls ar
-                            class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                            class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                         <button onclick="toggleFullInfo(this)"
-                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                            class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                            i
+
+                        </button>
+
                     </div>
 
-                    <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Benciletanol</h3>
+                    <div class="card-content mt-auto text-center pt-4">
+
+                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                            Benciletanol
+                        </h3>
+
                         <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank"
-                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                            class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+
                             Ver en RA
+
                         </a>
+
                     </div>
 
-                    <div
-                        class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                        <h3 class="text-lg md:text-2xl font-bold text-gray-900">Benciletanol</h3>
+                    <div class="full-info hidden mt-auto text-center pt-4">
+
+                        <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                            Benciletanol
+                        </h3>
+
                         <div class="text-lg text-gray-600 space-y-2">
                             <p><strong>Fórmula:</strong> C₈H₁₀O</p>
                             <p><strong>Estado:</strong> Líquido</p>
                             <p><strong>Peso molecular:</strong> 122.16 g/mol</p>
                         </div>
+
                     </div>
+
                 </div>
 
                 <!-- Cafeína -->
                 <div
                     class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                    <div class="relative flex-grow">
+
+                    <div class="relative flex-grow flex items-center justify-center">
+
                         <model-viewer src="modelos/cafeina.glb" alt="Cafeína" auto-rotate camera-controls ar
-                            class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                            class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                         <button onclick="toggleFullInfo(this)"
-                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                            class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                            i
+
+                        </button>
+
                     </div>
 
-                    <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Cafeína</h3>
+                    <div class="card-content mt-auto text-center pt-4">
+
+                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                            Cafeína
+                        </h3>
+
                         <a href="https://mywebar.com/p/Project_0_lui6nsi9y3" target="_blank"
-                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                            class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+
                             Ver en RA
+
                         </a>
+
                     </div>
 
-                    <div
-                        class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                        <h3 class="text-lg md:text-2xl font-bold text-gray-900">Cafeína</h3>
+                    <div class="full-info hidden mt-auto text-center pt-4">
+
+                        <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                            Cafeína
+                        </h3>
+
                         <div class="text-lg text-gray-600 space-y-2">
                             <p><strong>Fórmula:</strong> C₈H₁₀N₄O₂</p>
                             <p><strong>Estado:</strong> Sólido</p>
                             <p><strong>Peso molecular:</strong> 194.19 g/mol</p>
                         </div>
-                    </div>
-                </div>
 
+                    </div>
+
+
+                </div>
                 <!-- Metano -->
                 <div
                     class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                    <div class="relative flex-grow">
+
+                    <div class="relative flex-grow flex items-center justify-center">
+
                         <model-viewer src="modelos/metano.glb" alt="Metano" auto-rotate camera-controls ar
-                            class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                            class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                         <button onclick="toggleFullInfo(this)"
-                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                            class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                            i
+
+                        </button>
+
                     </div>
 
-                    <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Metano</h3>
+                    <div class="card-content mt-auto text-center pt-4">
+
+                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                            Metano
+                        </h3>
+
                         <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank"
-                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                            class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
                             Ver en RA
+
                         </a>
+
                     </div>
 
-                    <div
-                        class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                        <h3 class="text-lg md:text-2xl font-bold text-gray-900">Metano</h3>
+                    <div class="full-info hidden mt-auto text-center pt-4">
+
+                        <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                            Metano
+                        </h3>
+
                         <div class="text-lg text-gray-600 space-y-2">
                             <p><strong>Fórmula:</strong> CH₄</p>
                             <p><strong>Estado:</strong> Gas</p>
                             <p><strong>Peso molecular:</strong> 16.04 g/mol</p>
                         </div>
+
                     </div>
+
                 </div>
 
                 <!-- Fenol -->
                 <div
                     class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                    <div class="relative flex-grow">
+
+                    <div class="relative flex-grow flex items-center justify-center">
+
                         <model-viewer src="modelos/fenol (1).glb" alt="Fenol" auto-rotate camera-controls ar
-                            class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                            class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                         <button onclick="toggleFullInfo(this)"
-                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                            class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                            i
+
+                        </button>
+
                     </div>
 
-                    <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Fenol</h3>
+                    <div class="card-content mt-auto text-center pt-4">
+
+                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                            Fenol
+                        </h3>
+
                         <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank"
-                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                            class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+
                             Ver en RA
+
                         </a>
+
                     </div>
 
-                    <div
-                        class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                        <h3 class="text-lg md:text-2xl font-bold text-gray-900">Fenol</h3>
+                    <div class="full-info hidden mt-auto text-center pt-4">
+
+                        <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                            Fenol
+                        </h3>
+
                         <div class="text-lg text-gray-600 space-y-2">
                             <p><strong>Fórmula:</strong> C₆H₆O</p>
                             <p><strong>Estado:</strong> Sólido</p>
                             <p><strong>Peso molecular:</strong> 94.11 g/mol</p>
                         </div>
+
                     </div>
+
                 </div>
 
                 <!-- Glicerol -->
                 <div
                     class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                    <div class="relative flex-grow">
+
+                    <div class="relative flex-grow flex items-center justify-center">
+
                         <model-viewer src="modelos/glicerol (1).glb" alt="Glicerol" auto-rotate camera-controls ar
-                            class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                            class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                         <button onclick="toggleFullInfo(this)"
-                            class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                            class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                            i
+
+                        </button>
+
                     </div>
 
-                    <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Glicerol</h3>
+                    <div class="card-content mt-auto text-center pt-4">
+
+                        <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                            Glicerol
+                        </h3>
+
                         <a href="https://mywebar.com/p/Project_2_y08cdw22dd" target="_blank"
-                            class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                            class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
                             Ver en RA
+
                         </a>
+
                     </div>
 
-                    <div
-                        class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                        <h3 class="text-lg md:text-2xl font-bold text-gray-900">Glicerol</h3>
+                    <div class="full-info hidden mt-auto text-center pt-4">
+
+                        <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                            Glicerol
+                        </h3>
+
                         <div class="text-lg text-gray-600 space-y-2">
                             <p><strong>Fórmula:</strong> C₃H₈O₃</p>
                             <p><strong>Estado:</strong> Líquido</p>
                             <p><strong>Peso molecular:</strong> 92.09 g/mol</p>
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
-        </div>
     </main>
 
     <!-- FAQ Accordion -->
     <section class="py-24 bg-gray-50 px-14">
-        <div class="max-w-7xl mx-auto space-y-6">
+        <div class="max-w-8xl mx-auto space-y-6">
             <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center uppercase">Información Detallada</h2>
 
             <!-- Question 1 -->

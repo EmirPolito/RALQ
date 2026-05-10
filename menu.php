@@ -34,7 +34,7 @@ session_start();
     <header id="mainHeader"
         class="bg-white border-b border-gray-100 px-4 md:px-8 py-5 md:py-7 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
 
-        <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2">
+        <div class="max-w-[1460px] mx-auto flex justify-between items-center gap-2">
 
             <!-- Logo -->
             <div class="flex items-center flex-shrink-0">

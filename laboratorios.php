@@ -52,32 +52,49 @@ session_start();
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="img/laboratorios/labodesc.jpg" alt="Laboratorios" class="w-full h-full object-cover" fetchpriority="high" decoding="sync">
-            <div class="absolute inset-0 bg-teal-900/60 backdrop-blur-[3px]"></div>
-        </div>
-        <div class="relative z-10 max-w-5xl px-6 text-center text-white space-y-8">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter drop-shadow-2xl"
-                style="font-family: 'Poppins', sans-serif;">
-                Laboratorios Químicos
-            </h1>
-            <p class="text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto opacity-95">
-                Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras instalaciones
-                virtuales y domina los protocolos de seguridad.
-            </p>
+
+    <section class="relative overflow-hidden min-h-[240px] md:min-h-[470px] flex items-end md:items-start">
+        <!-- Imagen de fondo -->
+        <img src="img/laboratorios/labodesc.jpg" alt="Laboratorio de análisis"
+            class="absolute inset-0 w-full h-full object-cover object-center">
+
+        <!-- Overlay oscuro -->
+        <div class="absolute inset-0 bg-teal-900/65"></div>
+
+        <!-- Contenido -->
+        <div class="relative z-10 w-full px-2.5 md:px-16 pb-10 pt-28 md:pb-0 md:pt-56">
+
+            <div class="max-w-5xl mx-auto md:text-center">
+
+                <span class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-3">
+                    Área de Laboratorios
+                </span>
+
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
+                    Laboratorios Químicos
+                </h2>
+
+                <p
+                    class="text-white text-base font-normal md:text-2xl leading-relaxed border-l-4 md:border-0 border-white pl-3 md:pl-0">
+                    Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras
+                    instalaciones virtuales y domina los protocolos de seguridad.
+                </p>
+
+            </div>
         </div>
     </section>
 
     <!-- Content -->
     <main class="flex-grow py-24 px-10 bg-white">
-        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-20">
+
             <!-- Química General -->
             <a href="quimica-general.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img src="img/laboratorios/labo1.png" alt="Química General"
-                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
+                    class="w-full h-[400px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy" decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Química General</h3>
@@ -89,7 +106,8 @@ session_start();
             <a href="analisis-instrumental.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img src="img/laboratorios/labo2.png" alt="Análisis Instrumental"
-                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
+                    class="w-full h-[400px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy" decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Análisis Instrumental</h3>
@@ -101,16 +119,17 @@ session_start();
             <a href="plantas-quimicas.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img src="img/laboratorios/labo3.png" alt="Plantas Químicas"
-                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
+                    class="w-full h-[400px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy" decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Plantas Químicas</h3>
                     <p class="text-teal-300 font-medium uppercase tracking-widest text-sm">Visitar Plantas</p>
                 </div>
             </a>
+
         </div>
     </main>
-
     <!-- FAQ Accordion -->
     <section class="py-24 bg-gray-50 px-6">
         <div class="max-w-7xl mx-auto space-y-6">

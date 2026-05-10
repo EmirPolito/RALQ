@@ -108,20 +108,27 @@
 
         <!-- TEXTO SOBRE LA IMAGEN HERO -->
         <!-- Contenido del hero -->
-        <div
-            class="contenido-hero absolute inset-0 flex flex-col justify-center items-center text-center px-8 md:px-16 fade-in">
+        <!-- Contenido del hero -->
+        <div class="contenido-hero absolute inset-0 flex flex-col justify-start md:justify-center items-center text-center
+    px-8 md:px-16
+    pt-[30vh] md:pt-0
+    fade-in">
+
             <h1 class="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-6 drop-shadow-2xl leading-tight"
                 style="font-family: 'Poppins', sans-serif;">
                 Visualiza instrumentos y moleculas en Realidad Aumentada.
             </h1>
+
             <p
                 class="text-xl md:text-2xl lg:text-3xl text-gray-200 drop-shadow-md max-w-3xl mb-8 font-light leading-relaxed">
                 Descubre una experiencia educativa inmersiva con Realidad Aumentada de última generación.
             </p>
+
             <a href="menu.php"
                 class="px-10 py-5 bg-white text-black rounded-full font-semibold text-lg transition-all shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
                 ¡Empieza a usar la app!
             </a>
+
         </div>
     </section>
 

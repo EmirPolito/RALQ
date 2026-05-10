@@ -16,7 +16,9 @@ session_start();
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;700&family=Krub:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;700&family=Krub:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/laboratorios.css">
     <link rel="stylesheet" href="css/user-icon.css">
@@ -51,273 +53,479 @@ session_start();
         </div>
     </header>
 
+    <section
+        class="relative flex flex-col-reverse md:flex-row items-center gap-0 md:gap-10 p-8 md:p-16 bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden">
+        <!-- Imagen -->
+        <div class="w-full md:w-5/12">
+            <div class="relative group">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000">
+                </div>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <img src="img/laboratorios/labo-q-general.jpg" alt="Robot de laboratorio" class="hero-image" fetchpriority="high" decoding="sync">
-            <div class="hero-text">
-                <h2>LABORATORIO</h2>
-                <h1>QUÍMICA GENERAL</h1>
-                <p>Un laboratorio de química general es un espacio diseñado para la enseñanza y realización de experimentos básicos de química. En él, los estudiantes y científicos pueden practicar, analizar y comprender los principios fundamentales de la química a través de experimentos controlados.</p>
+                <img src="img/laboratorios/labo-q-general.jpg" alt="Laboratorio de análisis"
+                    class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96">
             </div>
+        </div>
+        <!-- Texto -->
+        <div class="w-full md:w-7/12 flex flex-col justify-center">
+            <span class="text-blue-600 font-medium tracking-wider text-sm mb-2 uppercase">
+                Laboratorio
+            </span>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4 tracking-tight">
+                Química General
+            </h2>
+
+            <p class="text-slate-600 text-base md:text-2xl leading-relaxed mb-8 border-l-4 border-blue-500 pl-3">
+                Un laboratorio de química general es un espacio diseñado para la enseñanza y realización de
+                experimentos básicos de química. En él, los estudiantes y científicos pueden practicar, analizar y
+                comprender los principios fundamentales de la química a través de experimentos controlados.
+            </p>
         </div>
     </section>
 
 
     <main>
-        <h2 style="text-align:center; margin-bottom: 2rem;">ELIGE UNO PARA VISUALIZARLO</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <h2 style="py-10 text-align:center; margin-bottom: 2rem;">ELIGE UNO PARA VISUALIZARLO</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-14">
             <!-- Gradilla -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
+
+                <div class="relative flex-grow flex items-center justify-center">
+
                     <model-viewer src="modelos/gradilla.glb" alt="Modelo de gradilla" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                        class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Gradilla</h3>
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Gradilla
+                    </h3>
+
                     <a href="https://mywebar.com/p/Project_1_bsnqy3x66o" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                        class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Gradilla</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Gradilla
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Sostener tubos de ensayo</p>
+                        <p><strong>Material:</strong> Madera, plástico o metal</p>
+                        <p><strong>Importancia:</strong> Evita derrames</p>
                     </div>
+
                 </div>
+
             </div>
+
             <!-- Matraz Erlenmeyer -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
-                    <model-viewer src="instrumentos3D/matraz (1).glb" alt="Modelo de matraz" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+
+                <div class="relative flex-grow flex items-center justify-center">
+
+                    <model-viewer src="instrumentos3D/matraz (1).glb" alt="Modelo de matraz" auto-rotate camera-controls
+                        ar class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Matraz</h3>
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Matraz
+                    </h3>
+
                     <a href="https://mywebar.com/p/Project_1_bsnqy3x66o" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                        class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Matraz</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Matraz
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Mezclar y calentar líquidos</p>
+                        <p><strong>Forma:</strong> Base ancha, cuello estrecho</p>
+                        <p><strong>Material:</strong> Vidrio de borosilicato</p>
                     </div>
+
                 </div>
+
             </div>
+
             <!-- Microscopio -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
-                    <model-viewer src="instrumentos3D/microscopio.glb" alt="Modelo de Microscopio" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+
+                <div class="relative flex-grow flex items-center justify-center">
+
+                    <model-viewer src="instrumentos3D/microscopio.glb" alt="Modelo de Microscopio" auto-rotate
+                        camera-controls ar class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Microscopio</h3>
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Microscopio
+                    </h3>
+
                     <a href="https://mywebar.com/p/Project_1_f3ia9uedar" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                        class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Microscopio</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Microscopio
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Observar objetos muy pequeños</p>
+                        <p><strong>Tipo:</strong> Óptico o electrónico</p>
+                        <p><strong>Importancia:</strong> Análisis celular</p>
                     </div>
+
                 </div>
+
             </div>
+
             <!-- Mortero con mano de porcelana -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
-                    <model-viewer src="instrumentos3D/mortero_con_mano.glb" alt="Modelo de Mortero con mano de porcelana" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+
+                <div class="relative flex-grow flex items-center justify-center">
+
+                    <model-viewer src="instrumentos3D/mortero_con_mano.glb"
+                        alt="Modelo de Mortero con mano de porcelana" auto-rotate camera-controls ar
+                        class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Mortero con mano de porcelana</h3>
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Mortero con mano
+                    </h3>
+
                     <a href="https://mywebar.com/p/Project_2_weu37bf31" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                        class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Mortero con mano de porcelana</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Mortero con mano
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Triturar sustancias sólidas</p>
+                        <p><strong>Material:</strong> Porcelana resistente</p>
+                        <p><strong>Acción:</strong> Molienda manual</p>
                     </div>
+
                 </div>
+
             </div>
+
             <!-- Pipeta -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
-                    <model-viewer src="instrumentos3D/pipeta (1).glb" alt="Modelo de Pinzas para pipeta" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+
+                <div class="relative flex-grow flex items-center justify-center">
+
+                    <model-viewer src="instrumentos3D/pipeta (1).glb" alt="Modelo de Pinzas para pipeta" auto-rotate
+                        camera-controls ar class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Pipeta</h3>
-                    <a href="//" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Pipeta
+                    </h3>
+
+                    <a href="#" target="_blank" class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Pipeta</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Pipeta
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Medir líquidos con precisión</p>
+                        <p><strong>Tipo:</strong> Volumétrica o graduada</p>
+                        <p><strong>Material:</strong> Vidrio o plástico</p>
                     </div>
+
                 </div>
+
             </div>
+
             <!-- Placas de porcelana para reacciones -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
-                    <model-viewer src="instrumentos3D/placas_de_porcelana_para_reacciones (2).glb" alt="Modelo de Placas de porcelana para reacciones" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+
+                <div class="relative flex-grow flex items-center justify-center">
+
+                    <model-viewer src="instrumentos3D/placas_de_porcelana_para_reacciones (2).glb"
+                        alt="Modelo de Placas de porcelana para reacciones" auto-rotate camera-controls ar
+                        class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Placas de porcelana para reacciones</h3>
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Placas de porcelana
+                    </h3>
+
                     <a href="img/QR/quimicaGen/matraz.jpg" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                        class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Placas de porcelana para reacciones</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Placas de porcelana
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Reacciones a pequeña escala</p>
+                        <p><strong>Forma:</strong> Múltiples cavidades</p>
+                        <p><strong>Ventaja:</strong> Fácil visualización de color</p>
                     </div>
+
                 </div>
+
             </div>
+
             <!-- Pinzas para matraces -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
-                    <model-viewer src="instrumentos3D/pinzas_para_matraces (1).glb" alt="Modelo de Pinzas para matraces" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+
+                <div class="relative flex-grow flex items-center justify-center">
+
+                    <model-viewer src="instrumentos3D/pinzas_para_matraces (1).glb" alt="Modelo de Pinzas para matraces"
+                        auto-rotate camera-controls ar class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Pinzas para matraces</h3>
-                    <a href="//" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Pinzas para matraces
+                    </h3>
+
+                    <a href="#" target="_blank" class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Pinzas para matraces</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Pinzas para matraces
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Sujetar matraces calientes</p>
+                        <p><strong>Material:</strong> Metal con aislante</p>
+                        <p><strong>Seguridad:</strong> Previene quemaduras</p>
                     </div>
+
                 </div>
+
             </div>
+
             <!-- Anillo_de_hierro -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
-                    <model-viewer src="instrumentos3D/anillo_de_hierro (1).glb" alt="Modelo de Pinzas para matraces" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+
+                <div class="relative flex-grow flex items-center justify-center">
+
+                    <model-viewer src="instrumentos3D/anillo_de_hierro (1).glb" alt="Modelo de Pinzas para matraces"
+                        auto-rotate camera-controls ar class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Anillo de hierro</h3>
-                    <a href="//" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Anillo de hierro
+                    </h3>
+
+                    <a href="#" target="_blank" class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Anillo de hierro</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Anillo de hierro
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Soporte para calentar</p>
+                        <p><strong>Acople:</strong> Soporte universal</p>
+                        <p><strong>Material:</strong> Hierro fundido</p>
                     </div>
+
                 </div>
+
             </div>
+
             <!-- Pinzas para tubo de ensayo -->
             <div
                 class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
-                <div class="relative flex-grow">
-                    <model-viewer src="instrumentos3D/pinzas_para_tubo_de_ensayo (1).glb" alt="Modelo de Pinzas para tubo de ensayo" auto-rotate camera-controls ar
-                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+
+                <div class="relative flex-grow flex items-center justify-center">
+
+                    <model-viewer src="instrumentos3D/pinzas_para_tubo_de_ensayo (1).glb"
+                        alt="Modelo de Pinzas para tubo de ensayo" auto-rotate camera-controls ar
+                        class="w-full h-40 md:h-64 bg-transparent"></model-viewer>
+
                     <button onclick="toggleFullInfo(this)"
-                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                        class="absolute top-0 right-0 w-10 h-10 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">
+
+                        i
+
+                    </button>
+
                 </div>
 
-                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
-                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Pinzas para tubo de ensayo</h3>
-                    <a href="//" target="_blank"
-                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
-                        Ver en Realidad Aumentada
+                <div class="card-content mt-auto text-center pt-4">
+
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-3">
+                        Pinzas para tubo
+                    </h3>
+
+                    <a href="#" target="_blank" class="block py-4 bg-blue-600 text-white rounded-2xl font-bold text-xl">
+
+                        Ver en RA
+
                     </a>
+
                 </div>
 
-                <div
-                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
-                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Pinzas para tubo de ensayo</h3>
+                <div class="full-info hidden mt-auto text-center pt-4">
+
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900 mb-4">
+                        Pinzas para tubo
+                    </h3>
+
                     <div class="text-lg text-gray-600 space-y-2">
-                        <p>//</p>
-                    <p>//</p>
-                    <p>//</p>
+                        <p><strong>Uso:</strong> Sujetar tubos al calentar</p>
+                        <p><strong>Material:</strong> Madera o metal</p>
+                        <p><strong>Seguridad:</strong> Aísla del calor</p>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </main>
@@ -337,7 +545,9 @@ session_start();
     <div class="w-full px-6 md:px-12 py-12">
         <!-- Sección 1 -->
         <section class="border-b border-gray-300 py-4">
-            <button class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <button
+                class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none"
+                onclick="toggleAccordion(this)">
                 ¿Para qué sirve un laboratorio de química general?
                 <span class="transform transition-transform duration-300">+</span>
             </button>
@@ -354,7 +564,9 @@ session_start();
 
         <!-- Sección 2 -->
         <section class="border-b border-gray-300 py-4">
-            <button class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <button
+                class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none"
+                onclick="toggleAccordion(this)">
                 ¿Qué áreas tiene un laboratorio de química general?
                 <span class="transform transition-transform duration-300">+</span>
             </button>
@@ -362,7 +574,8 @@ session_start();
                 <ul class="list-disc list-inside space-y-2">
                     <li><strong>Área de trabajo:</strong> Mesas con quemadores, reactivos y equipos de laboratorio.</li>
                     <li><strong>Área de almacenamiento:</strong> Donde se guardan reactivos y sustancias químicas.</li>
-                    <li><strong>Área de seguridad:</strong> Incluye extintores, regaderas de emergencia y botiquín de primeros auxilios.</li>
+                    <li><strong>Área de seguridad:</strong> Incluye extintores, regaderas de emergencia y botiquín de
+                        primeros auxilios.</li>
                     <li><strong>Campana de extracción:</strong> Para trabajar con gases tóxicos de manera segura.</li>
                 </ul>
             </div>
@@ -370,7 +583,9 @@ session_start();
 
         <!-- Sección 3 -->
         <section class="border-b border-gray-300 py-4">
-            <button class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <button
+                class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none"
+                onclick="toggleAccordion(this)">
                 Instrumentos y equipos comunes
                 <span class="transform transition-transform duration-300">+</span>
             </button>
@@ -389,7 +604,9 @@ session_start();
 
         <!-- Sección 4 -->
         <section class="border-b border-gray-300 py-4">
-            <button class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <button
+                class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none"
+                onclick="toggleAccordion(this)">
                 Normas de seguridad
                 <span class="transform transition-transform duration-300">+</span>
             </button>
@@ -406,7 +623,9 @@ session_start();
 
         <!-- Sección 5 -->
         <section class="border-b border-gray-300 py-4">
-            <button class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <button
+                class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none"
+                onclick="toggleAccordion(this)">
                 Ejemplos de experimentos en un laboratorio de química general
                 <span class="transform transition-transform duration-300">+</span>
             </button>
@@ -423,12 +642,15 @@ session_start();
 
         <!-- Sección 6 -->
         <section class="border-b border-gray-300 py-4">
-            <button class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <button
+                class="w-full text-left flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none"
+                onclick="toggleAccordion(this)">
                 Resumen
                 <span class="transform transition-transform duration-300">+</span>
             </button>
             <div class="mt-2 hidden text-gray-700">
-                <p>Un laboratorio de química general es esencial para el aprendizaje práctico de la química. Permite a los estudiantes experimentar y reforzar los conceptos teóricos de manera segura y controlada.</p>
+                <p>Un laboratorio de química general es esencial para el aprendizaje práctico de la química. Permite a
+                    los estudiantes experimentar y reforzar los conceptos teóricos de manera segura y controlada.</p>
             </div>
         </section>
 
@@ -478,7 +700,8 @@ session_start();
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modalTitle">Instrumento</h2>
-            <img id="modalImage" src="" alt="Instrument Image" style="max-width: 100%; height: auto; border-radius: 10px;">
+            <img id="modalImage" src="" alt="Instrument Image"
+                style="max-width: 100%; height: auto; border-radius: 10px;">
             <p id="modalDescription">Descripción del instrumento.</p>
             <script src="js/qr-emergente.js"></script>
         </div>

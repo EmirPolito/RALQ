@@ -29,6 +29,8 @@ session_start();
             gap: 0 !important;
         }
     </style>
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="img/laboratorios/labo-tabla-periodica.jpg">
 </head>
 
 <body>
@@ -52,7 +54,7 @@ session_start();
 
     <section class="hero-section">
         <div class="hero-content">
-            <img src="img/laboratorios/labo-tabla-periodica.jpg" alt="Robot de laboratorio" class="hero-image">
+            <img src="img/laboratorios/labo-tabla-periodica.jpg" alt="Robot de laboratorio" class="hero-image" fetchpriority="high" decoding="sync">
             <div class="hero-text">
                 <h1>TABLA PERIÓDICA</h1>
                 <p>La tabla periódica fue diseñada por el químico ruso Dmitri Mendeléiev en 1869 y contenía 63 de los 118 elementos conocidos hoy en la naturaleza. Es un cuadro que presenta todos los elementos químicos que existen ordenados según sus propiedades físicas.</p>
