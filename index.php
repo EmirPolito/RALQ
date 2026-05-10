@@ -216,7 +216,7 @@
         </section>
 
         <!-- Sección 1: Estructuras Moleculares -->
-        <section class="bg-[#0f172a] text-white">
+        <section class="bg-[#434e4e] text-white">
             <div class="max-w-[1400px] mx-auto px-6 py-20 lg:py-32">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -224,7 +224,7 @@
                     <div class="flex flex-col gap-10 lg:pr-8">
                         <!-- Eyebrow -->
                         <span
-                            class="inline-flex items-center gap-2 self-center lg:self-start text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400">
+                            class="inline-flex items-center gap-2 self-center lg:self-start text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full bg-white border border-teal-500/20 text-black">
                             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                 stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -237,16 +237,16 @@
                         <div class="text-center lg:text-left">
                             <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
                                 style="font-family:'Poppins',sans-serif;">
-                                Estructuras en <span class="text-teal-400">3D</span>
+                                Estructuras en 3D
                             </h2>
-                            <div class="mt-4 w-16 h-1 bg-teal-500 rounded-full mx-auto lg:mx-0"></div>
+                            <div class="mt-4 w-16 h-1 bg-white rounded-full mx-auto lg:mx-0"></div>
                         </div>
 
                         <!-- Features -->
                         <div class="flex flex-col gap-8">
                             <div
                                 class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
-                                <div class="shrink-0 p-3 rounded-2xl bg-white/5 border border-white/10 text-teal-400">
+                                <div class="shrink-0 p-3 rounded-2xl bg-white/5 border border-white/10">
                                     <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                         stroke-width="1.5">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -255,14 +255,14 @@
                                 </div>
                                 <div>
                                     <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">Interacción Total</h3>
-                                    <p class="text-gray-400 text-base lg:text-lg leading-relaxed">Manipula cada átomo y
+                                    <p class="text-gray-200 text-base lg:text-lg leading-relaxed">Manipula cada átomo y
                                         enlace para entender la química desde adentro.</p>
                                 </div>
                             </div>
 
                             <div
                                 class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
-                                <div class="shrink-0 p-3 rounded-2xl bg-white/5 border border-white/10 text-teal-400">
+                                <div class="shrink-0 p-3 rounded-2xl bg-white/5 border border-white/10">
                                     <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                         stroke-width="1.5">
                                         <path stroke-linecap="round" stroke-linejoin="round"
