@@ -30,6 +30,7 @@ session_start();
             gap: 0 !important;
         }
     </style>
+    <link rel="preload" as="image" href="img/laboratorios/labodesc.jpg">
 </head>
 
 <body class="bg-gray-50 min-h-screen flex flex-col font-['Krub']">
@@ -54,7 +55,7 @@ session_start();
     <!-- Hero Section -->
     <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="img/laboratorios/labodesc.jpg" alt="Laboratorios" class="w-full h-full object-cover">
+            <img src="img/laboratorios/labodesc.jpg" alt="Laboratorios" class="w-full h-full object-cover" fetchpriority="high" decoding="sync">
             <div class="absolute inset-0 bg-teal-900/60 backdrop-blur-[3px]"></div>
         </div>
         <div class="relative z-10 max-w-5xl px-6 text-center text-white space-y-8">
@@ -70,13 +71,13 @@ session_start();
     </section>
 
     <!-- Content -->
-    <main class="flex-grow py-24 px-6 bg-white">
-        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <main class="flex-grow py-24 px-10 bg-white">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
             <!-- Química General -->
             <a href="quimica-general.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img src="img/laboratorios/labo1.png" alt="Química General"
-                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Química General</h3>
@@ -88,7 +89,7 @@ session_start();
             <a href="analisis-instrumental.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img src="img/laboratorios/labo2.png" alt="Análisis Instrumental"
-                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Análisis Instrumental</h3>
@@ -100,7 +101,7 @@ session_start();
             <a href="plantas-quimicas.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img src="img/laboratorios/labo3.png" alt="Plantas Químicas"
-                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700">
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Plantas Químicas</h3>

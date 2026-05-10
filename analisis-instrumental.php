@@ -30,6 +30,7 @@ session_start();
           gap: 0 !important;
       }
   </style>
+  <link rel="preload" as="image" href="img/laboratorios/labo-q-analisis.jpg">
 </head>
 
 <body>
@@ -53,7 +54,7 @@ session_start();
 
   <section class="hero-section">
     <div class="hero-content">
-      <img src="img/laboratorios/labo-q-analisis.jpg" alt="Robot de laboratorio" class="hero-image">
+      <img src="img/laboratorios/labo-q-analisis.jpg" alt="Robot de laboratorio" class="hero-image" fetchpriority="high" decoding="sync">
       <div class="hero-text">
         <h2>LABORATORIO</h2>
         <h1>ANALISÍS INSTRUMENTAL</h1>
@@ -69,207 +70,173 @@ session_start();
 
   <main>
     <h2 style="text-align:center; margin-bottom: 2rem;">ELIGE UNO PARA VISUALIZARLO</h2>
-        <div class="menu grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Autoclave -->
+            <div
+                class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
+                <div class="relative flex-grow">
+                    <model-viewer src="instrumentos3D/autoclave.glb" alt="Modelo de Autoclave" auto-rotate camera-controls ar
+                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                    <button onclick="toggleFullInfo(this)"
+                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                </div>
 
-      <!-- Autoclave -->
-      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
-        <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
+                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Autoclave</h3>
+                    <a href="img/QR/analisis/Autoclave.jpg" target="_blank"
+                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        Ver en Realidad Aumentada
+                    </a>
+                </div>
 
-        <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
-          <model-viewer
-            src="instrumentos3D/autoclave.glb"
-            alt="Modelo de Autoclave"
-            auto-rotate
-            camera-controls
-            ar
-            style="width: 100%; height: 240px; background-color: transparent;"
-            shadow-intensity="0"
-            interaction-prompt="none">
-          </model-viewer>
+                <div
+                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Autoclave</h3>
+                    <div class="text-lg text-gray-600 space-y-2">
+                        <p>Equipo utilizado para la esterilización de materiales mediante vapor de agua a alta presión y temperatura.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Campana de extracción -->
+            <div
+                class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
+                <div class="relative flex-grow">
+                    <model-viewer src="instrumentos3D/campana_de_extraccion.glb" alt="Modelo de Campana de extracción" auto-rotate camera-controls ar
+                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                    <button onclick="toggleFullInfo(this)"
+                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                </div>
 
-          <h2 style="margin-top: 5rem; font-size: 1.2rem; font-weight: bold; color: #222; text-align:center;">Autoclave</h2>
-          <a href="img/QR/analisis/Autoclave.jpg" target="_blank"
-            style="display: inline-block; margin-top: auto; padding: 0.8rem 2rem; background-color: #2563eb; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; box-shadow: 0 2px 8px #2563eb33; border: none; cursor: pointer;">
-            Ver en Realidad Aumentada
-          </a>
+                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Campana de extracción</h3>
+                    <a href="img/QR/analisis/Campana.jpg" target="_blank"
+                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        Ver en Realidad Aumentada
+                    </a>
+                </div>
+
+                <div
+                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Campana de extracción</h3>
+                    <div class="text-lg text-gray-600 space-y-2">
+                        <p>Dispositivo de seguridad que protege al usuario de vapores y gases tóxicos al extraerlos del área de trabajo.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Centrifugadora -->
+            <div
+                class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
+                <div class="relative flex-grow">
+                    <model-viewer src="instrumentos3D/centrifugadora.glb" alt="Modelo de Centrifugadora" auto-rotate camera-controls ar
+                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                    <button onclick="toggleFullInfo(this)"
+                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                </div>
+
+                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Centrifugadora</h3>
+                    <a href="img/QR/analisis/Centrifugadora.jpg" target="_blank"
+                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        Ver en Realidad Aumentada
+                    </a>
+                </div>
+
+                <div
+                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Centrifugadora</h3>
+                    <div class="text-lg text-gray-600 space-y-2">
+                        <p>Equipo de laboratorio que separa componentes de una mezcla mediante la fuerza centrífuga, basado en su densidad.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Incubadora -->
+            <div
+                class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
+                <div class="relative flex-grow">
+                    <model-viewer src="instrumentos3D/incubadora.glb" alt="Modelo de Incubadora" auto-rotate camera-controls ar
+                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                    <button onclick="toggleFullInfo(this)"
+                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                </div>
+
+                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Incubadora</h3>
+                    <a href="a" target="_blank"
+                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        Ver en Realidad Aumentada
+                    </a>
+                </div>
+
+                <div
+                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Incubadora</h3>
+                    <div class="text-lg text-gray-600 space-y-2">
+                        <p>Equipo que mantiene condiciones controladas de temperatura y humedad para el crecimiento de cultivos biológicos.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Placa calefactora -->
+            <div
+                class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
+                <div class="relative flex-grow">
+                    <model-viewer src="instrumentos3D/placa_calefactora.glb" alt="Modelo de Placa calefactora" auto-rotate camera-controls ar
+                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                    <button onclick="toggleFullInfo(this)"
+                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                </div>
+
+                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Placa calefactora</h3>
+                    <a href="a" target="_blank"
+                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        Ver en Realidad Aumentada
+                    </a>
+                </div>
+
+                <div
+                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Placa calefactora</h3>
+                    <div class="text-lg text-gray-600 space-y-2">
+                        <p>Dispositivo utilizado para calentar sustancias en recipientes de vidrio de manera uniforme y controlada.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Soporte universal -->
+            <div
+                class="group bg-gray-50 rounded-[2rem] p-4 md:p-6 shadow-md shadow-gray-300 hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col aspect-square max-w-[280px] md:aspect-auto md:min-h-[400px] md:max-w-[340px] mx-auto w-full">
+                <div class="relative flex-grow">
+                    <model-viewer src="instrumentos3D/soporte_universal.glb" alt="Modelo de Soporte universal" auto-rotate camera-controls ar
+                        class="w-full h-32 md:h-52 bg-transparent"></model-viewer>
+                    <button onclick="toggleFullInfo(this)"
+                        class="absolute top-0 right-0 w-10 h-10 bg-teal-500 text-white rounded-full font-bold shadow-lg hover:scale-110 transition-transform">i</button>
+                </div>
+
+                <div class="card-content mt-auto md:mt-32 text-center flex flex-col flex-grow pt-6 md:pt-12">
+                    <h3 class="text-xl md:text-3xl font-bold text-gray-900 mb-2 md:mb-6">Soporte universal</h3>
+                    <a href="a" target="_blank"
+                        class="mt-auto block py-4 bg-teal-500 text-white rounded-2xl font-bold text-xl hover:bg-teal-600 transition-all shadow-lg hover:shadow-teal-200">
+                        Ver en Realidad Aumentada
+                    </a>
+                </div>
+
+                <div
+                    class="full-info hidden mt-auto md:mt-32 text-center flex-grow space-y-2 md:space-y-4 pt-6 md:pt-12">
+                    <h3 class="text-lg md:text-2xl font-bold text-gray-900">Soporte universal</h3>
+                    <div class="text-lg text-gray-600 space-y-2">
+                        <p>Estructura metálica utilizada en laboratorios para sujetar y sostener distintos equipos o instrumentos.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="full-info" style="display:none; flex-direction: column; justify-content: center; align-items: center; text-align:center; padding: 16px; flex-grow:1; overflow-y:auto; font-size:1rem;">
-          <h2 style="font-size:1.3rem; font-weight:bold; margin-bottom: 10px;">Autoclave</h2>
-          <p>Equipo utilizado para la esterilización de materiales mediante vapor de agua a alta presión y temperatura.</p>
-        </div>
-      </div>
-
-
-
-      <!-- Campana de extracción -->
-      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
-        <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
-
-        <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
-          <model-viewer
-            src="instrumentos3D/campana_de_extraccion.glb"
-            alt="Modelo de Campana de extracción"
-            auto-rotate
-            camera-controls
-            ar
-            style="width: 100%; height: 240px; background-color: transparent;"
-            shadow-intensity="0"
-            interaction-prompt="none">
-          </model-viewer>
-
-          <h2 style="margin-top: 5rem; font-size: 1.2rem; font-weight: bold; color: #222; text-align:center;">Campana de extracción</h2>
-          <a href="img/QR/analisis/Campana.jpg" target="_blank"
-            style="display: inline-block; margin-top: auto; padding: 0.8rem 2rem; background-color: #2563eb; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; box-shadow: 0 2px 8px #2563eb33; border: none; cursor: pointer;">
-            Ver en Realidad Aumentada
-          </a>
-        </div>
-
-        <div class="full-info" style="display:none; flex-direction: column; justify-content: center; align-items: center; text-align:center; padding: 16px; flex-grow:1; overflow-y:auto; font-size:1rem;">
-          <h2 style="font-size:1.3rem; font-weight:bold; margin-bottom: 10px;">Campana de extracción</h2>
-          <p>Dispositivo de seguridad que protege al usuario de vapores y gases tóxicos al extraerlos del área de trabajo.</p>
-        </div>
-      </div>
-
-
-
-      <!-- Centrifugadora -->
-      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
-        <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
-
-        <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
-          <model-viewer
-            src="instrumentos3D/centrifugadora.glb"
-            alt="Modelo de Centrifugadora"
-            auto-rotate
-            camera-controls
-            ar
-            style="width: 100%; height: 240px; background-color: transparent;"
-            shadow-intensity="0"
-            interaction-prompt="none">
-          </model-viewer>
-
-          <h2 style="margin-top: 5rem; font-size: 1.2rem; font-weight: bold; color: #222; text-align:center;">Centrifugadora</h2>
-          <a href="img/QR/analisis/Centrifugadora.jpg" target="_blank"
-            style="display: inline-block; margin-top: auto; padding: 0.8rem 2rem; background-color: #2563eb; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; box-shadow: 0 2px 8px #2563eb33; border: none; cursor: pointer;">
-            Ver en Realidad Aumentada
-          </a>
-        </div>
-
-        <div class="full-info" style="display:none; flex-direction: column; justify-content: center; align-items: center; text-align:center; padding: 16px; flex-grow:1; overflow-y:auto; font-size:1rem;">
-          <h2 style="font-size:1.3rem; font-weight:bold; margin-bottom: 10px;">Centrifugadora</h2>
-          <p>Equipo de laboratorio que separa componentes de una mezcla mediante la fuerza centrífuga, basado en su densidad.</p>
-        </div>
-      </div>
-
-
-
-      <!-- Incubadora -->
-      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
-        <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
-
-        <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
-          <model-viewer
-            src="instrumentos3D/incubadora.glb"
-            alt="Modelo de Incubadora"
-            auto-rotate
-            camera-controls
-            ar
-            style="width: 100%; height: 240px; background-color: transparent;"
-            shadow-intensity="0"
-            interaction-prompt="none">
-          </model-viewer>
-
-          <h2 style="margin-top: 5rem; font-size: 1.2rem; font-weight: bold; color: #222; text-align:center;">Incubadora</h2>
-          <a href="a" target="_blank"
-            style="display: inline-block; margin-top: auto; padding: 0.8rem 2rem; background-color: #2563eb; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; box-shadow: 0 2px 8px #2563eb33; border: none; cursor: pointer;">
-            Ver en Realidad Aumentada
-          </a>
-        </div>
-
-        <div class="full-info" style="display:none; flex-direction: column; justify-content: center; align-items: center; text-align:center; padding: 16px; flex-grow:1; overflow-y:auto; font-size:1rem;">
-          <h2 style="font-size:1.3rem; font-weight:bold; margin-bottom: 10px;">Incubadora</h2>
-          <p>Equipo que mantiene condiciones controladas de temperatura y humedad para el crecimiento de cultivos biológicos.</p>
-        </div>
-      </div>
-
-
-
-      <!-- Placa calefactora -->
-      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
-        <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
-
-        <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
-          <model-viewer
-            src="instrumentos3D/placa_calefactora.glb"
-            alt="Modelo de Placa calefactora"
-            auto-rotate
-            camera-controls
-            ar
-            style="width: 100%; height: 240px; background-color: transparent;"
-            shadow-intensity="0"
-            interaction-prompt="none">
-          </model-viewer>
-
-          <h2 style="margin-top: 5rem; font-size: 1.2rem; font-weight: bold; color: #222; text-align:center;">Placa calefactora</h2>
-          <a href="a" target="_blank"
-            style="display: inline-block; margin-top: auto; padding: 0.8rem 2rem; background-color: #2563eb; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; box-shadow: 0 2px 8px #2563eb33; border: none; cursor: pointer;">
-            Ver en Realidad Aumentada
-          </a>
-        </div>
-
-        <div class="full-info" style="display:none; flex-direction: column; justify-content: center; align-items: center; text-align:center; padding: 16px; flex-grow:1; overflow-y:auto; font-size:1rem;">
-          <h2 style="font-size:1.3rem; font-weight:bold; margin-bottom: 10px;">Placa calefactora</h2>
-          <p>Dispositivo utilizado para calentar sustancias en recipientes de vidrio de manera uniforme y controlada.</p>
-        </div>
-      </div>
-
-
-
-      <!-- Soporte universal -->
-      <div class="menu-item w-full max-w-[340px] h-[420px] bg-white rounded-xl shadow-lg p-4 relative flex flex-col transition-all duration-300 hover:scale-105">
-        <button onclick="toggleFullInfo(this)" style="position: absolute; top: 10px; right: 10px; background:#2563eb; color:white; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; font-weight:bold; z-index:10;">i</button>
-
-        <div class="card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
-          <model-viewer
-            src="instrumentos3D/soporte_universal.glb"
-            alt="Modelo de Soporte universal"
-            auto-rotate
-            camera-controls
-            ar
-            style="width: 100%; height: 240px; background-color: transparent;"
-            shadow-intensity="0"
-            interaction-prompt="none">
-          </model-viewer>
-
-          <h2 style="margin-top: 5rem; font-size: 1.2rem; font-weight: bold; color: #222; text-align:center;">Soporte universal</h2>
-          <a href="a" target="_blank"
-            style="display: inline-block; margin-top: auto; padding: 0.8rem 2rem; background-color: #2563eb; color: white; border-radius: 8px; text-decoration: none; font-size: 1.1rem; font-weight: 600; box-shadow: 0 2px 8px #2563eb33; border: none; cursor: pointer;">
-            Ver en Realidad Aumentada
-          </a>
-        </div>
-
-        <div class="full-info" style="display:none; flex-direction: column; justify-content: center; align-items: center; text-align:center; padding: 16px; flex-grow:1; overflow-y:auto; font-size:1rem;">
-          <h2 style="font-size:1.3rem; font-weight:bold; margin-bottom: 10px;">Soporte universal</h2>
-          <p>Estructura metálica utilizada en laboratorios para sujetar y sostener distintos equipos o instrumentos.</p>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 
   <script>
     function toggleFullInfo(button) {
-      const card = button.closest('.menu-item');
-      const content = card.querySelector('.card-content');
-      const info = card.querySelector('.full-info');
-
-      if (content.style.display !== "none") {
-        content.style.display = "none";
-        info.style.display = "flex";
-      } else {
-        content.style.display = "flex";
-        info.style.display = "none";
-      }
+        const card = button.closest('.group');
+        const content = card.querySelector('.card-content');
+        const info = card.querySelector('.full-info');
+        content.classList.toggle('hidden');
+        info.classList.toggle('hidden');
     }
   </script>
 

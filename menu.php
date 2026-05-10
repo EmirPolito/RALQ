@@ -24,12 +24,15 @@ session_start();
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/user-icon.css">
     <link rel="stylesheet" href="css/animaciones.css">
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="img/fondomenu.png">
 </head>
 
 <body class="bg-gray-50 min-h-screen flex flex-col font-['Krub']">
 
     <!-- HEADER -->
-    <header id="mainHeader" class="bg-white border-b border-gray-100 px-4 md:px-8 py-5 md:py-7 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
+    <header id="mainHeader"
+        class="bg-white border-b border-gray-100 px-4 md:px-8 py-5 md:py-7 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
 
         <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2">
 
@@ -103,7 +106,8 @@ session_start();
 
         <div class="absolute inset-0 z-0">
 
-            <img src="img/fondomenu.png" alt="Fondo" class="w-full h-full object-cover">
+            <img src="img/fondomenu.png" alt="Fondo" class="w-full h-full object-cover" fetchpriority="high"
+                decoding="sync">
 
             <div class="absolute inset-0 bg-teal-900/40 backdrop-blur-[2px]"></div>
 
@@ -118,16 +122,17 @@ session_start();
     </section>
 
     <!-- MAIN -->
-    <main class="flex-grow py-20 px-7">
+    <main class="flex-grow py-20 px-10">
 
-        <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-16">
+        <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-20">
 
             <!-- CARD -->
             <a href="estructuras-mol.php"
                 class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
                 <img src="img/img-menu/3 (2).png" alt="Estructuras Moleculares"
-                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500">
+                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                    loading="lazy" decoding="async">
 
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
@@ -144,7 +149,8 @@ session_start();
                 class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
                 <img src="img/img-menu/tuslabs.png" alt="Laboratorios"
-                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700">
+                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy" decoding="async">
 
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
@@ -161,7 +167,8 @@ session_start();
                 class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
                 <img src="img/img-menu/tablape.png" alt="Tabla Periódica"
-                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700">
+                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy" decoding="async">
 
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
@@ -178,7 +185,8 @@ session_start();
                 class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
                 <img src="img/img-menu/4 (2).png" alt="Video"
-                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700">
+                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy" decoding="async">
 
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
@@ -196,7 +204,8 @@ session_start();
                 class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
                 <img src="img/img-menu/5.png" alt="Evaluación"
-                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700">
+                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy" decoding="async">
 
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
@@ -213,7 +222,8 @@ session_start();
                 class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
                 <img src="img/img-menu/6.png" alt="Juegos"
-                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700">
+                    class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+                    loading="lazy" decoding="async">
 
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
@@ -304,7 +314,7 @@ session_start();
 
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
+
             if (scrollTop > lastScrollTop && scrollTop > 100) {
                 // Scrolling down
                 header.style.transform = 'translateY(-100%)';
@@ -312,7 +322,7 @@ session_start();
                 // Scrolling up or at top
                 header.style.transform = 'translateY(0)';
             }
-            
+
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         }, false);
     </script>
