@@ -33,7 +33,7 @@ session_start();
         }
     </style>
     <!-- Preload hero image -->
-    <link rel="preload" as="image" href="img/laboratorios/Moleculas.jpg">
+    <link rel="preload" fetchpriority="high" as="image" href="img/laboratorios/Moleculas.jpg">
 </head>
 
 <body class="bg-gray-50 min-h-screen flex flex-col font-['Krub']">

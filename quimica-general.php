@@ -32,7 +32,7 @@ session_start();
             gap: 0 !important;
         }
     </style>
-    <link rel="preload" as="image" href="img/laboratorios/labo-q-general.jpg">
+    <link rel="preload" fetchpriority="high" as="image" href="img/laboratorios/labo-q-general.jpg">
 </head>
 
 <body>
@@ -43,13 +43,13 @@ session_start();
             <!-- Logo -->
             <div class="flex items-center flex-shrink-0">
                 <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain"
-                    fetchpriority="high">
+                    fetchpriority="high" decoding="sync">
             </div>
             <!-- Back Button -->
             <div class="flex items-center">
                 <a href="laboratorios.php" class="hover:scale-110 transition-transform flex items-center group">
                     <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain"
-                        fetchpriority="high">
+                        fetchpriority="high" decoding="sync">
                 </a>
             </div>
         </div>
@@ -65,7 +65,7 @@ session_start();
                 </div>
 
                 <img src="img/laboratorios/labo-q-general.jpg" alt="Laboratorio de análisis"
-                    class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96" fetchpriority="high">
+                    class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96" fetchpriority="high" decoding="sync">
             </div>
         </div>
         <!-- Texto -->

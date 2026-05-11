@@ -30,7 +30,7 @@ session_start();
             gap: 0 !important;
         }
     </style>
-    <link rel="preload" as="image" href="img/laboratorios/labodesc.jpg">
+    <link rel="preload" fetchpriority="high" as="image" href="img/laboratorios/labodesc.jpg">
 </head>
 
 <body class="bg-gray-50 min-h-screen flex flex-col font-['Krub']">
@@ -41,14 +41,14 @@ session_start();
             <!-- Logo -->
             <div class="flex items-center flex-shrink-0">
                 <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain"
-                    fetchpriority="high">
+                    fetchpriority="high" decoding="sync">
             </div>
 
             <!-- Back Button -->
             <div class="flex items-center">
                 <a href="menu.php" class="hover:scale-110 transition-transform flex items-center group">
                     <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain"
-                        fetchpriority="high">
+                        fetchpriority="high" decoding="sync">
                 </a>
             </div>
         </div>
@@ -58,7 +58,7 @@ session_start();
     <section class="relative overflow-hidden min-h-[240px] md:min-h-[470px] flex items-end md:items-start">
         <!-- Imagen de fondo -->
         <img src="img/laboratorios/labodesc.jpg" alt="Laboratorio de análisis"
-            class="absolute inset-0 w-full h-full object-cover object-center" fetchpriority="high">
+            class="absolute inset-0 w-full h-full object-cover object-center" fetchpriority="high" decoding="sync">
 
         <!-- Overlay oscuro -->
         <div class="absolute inset-0 bg-teal-900/65"></div>
