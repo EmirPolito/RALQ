@@ -64,7 +64,7 @@ session_start();
                     class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000">
                 </div>
 
-                <img src="img/laboratorios/Moleculas.jpg" alt="Laboratorio de análisis"
+                <img loading="lazy" src="img/laboratorios/Moleculas.jpg" alt="Laboratorio de análisis"
                     class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96">
             </div>
         </div>
@@ -391,9 +391,8 @@ session_start();
     </main>
 
     <!-- FAQ Accordion -->
-    <section class="py-24 bg-gray-50 px-14">
+    <section class="py-20 dm:py-20 bg-gray-50 px-6 md:px-28">
         <div class="max-w-8xl mx-auto space-y-6">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center uppercase">Información Detallada</h2>
 
             <!-- Question 1 -->
             <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
@@ -473,7 +472,7 @@ session_start();
     </section>
 
     <!-- FOOTER -->
-    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #5c886c;">
         <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
             <div class="text-center">
                 <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Contacto</h4>

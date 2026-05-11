@@ -251,7 +251,7 @@ session_start();
     </main>
 
     <!-- FOOTER -->
-    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #5c886c;">
 
         <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
 

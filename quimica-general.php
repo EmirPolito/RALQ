@@ -42,12 +42,14 @@ session_start();
         <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2 px-4 md:px-8 py-5 md:py-7 w-full">
             <!-- Logo -->
             <div class="flex items-center flex-shrink-0">
-                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
+                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain"
+                    fetchpriority="high">
             </div>
             <!-- Back Button -->
             <div class="flex items-center">
                 <a href="laboratorios.php" class="hover:scale-110 transition-transform flex items-center group">
-                    <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain">
+                    <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain"
+                        fetchpriority="high">
                 </a>
             </div>
         </div>
@@ -63,7 +65,7 @@ session_start();
                 </div>
 
                 <img src="img/laboratorios/labo-q-general.jpg" alt="Laboratorio de análisis"
-                    class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96">
+                    class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96" fetchpriority="high">
             </div>
         </div>
         <!-- Texto -->
@@ -542,7 +544,7 @@ session_start();
 
 
 
-    <div class="w-full px-6 md:px-12 py-12">
+    <div class="w-full px-14 md:px-36 py-12">
         <!-- Sección 1 -->
         <section class="border-b border-gray-300 py-4">
             <button
@@ -669,7 +671,7 @@ session_start();
 
 
     <!-- FOOTER -->
-    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #5c886c;">
         <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
             <div class="text-center">
                 <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Contacto</h4>
@@ -700,7 +702,7 @@ session_start();
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modalTitle">Instrumento</h2>
-            <img id="modalImage" src="" alt="Instrument Image"
+            <img loading="lazy" id="modalImage" src="" alt="Instrument Image"
                 style="max-width: 100%; height: auto; border-radius: 10px;">
             <p id="modalDescription">Descripción del instrumento.</p>
             <script src="js/qr-emergente.js"></script>

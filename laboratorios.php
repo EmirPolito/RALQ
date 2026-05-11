@@ -40,13 +40,15 @@ session_start();
         <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2 px-4 md:px-8 py-5 md:py-7 w-full">
             <!-- Logo -->
             <div class="flex items-center flex-shrink-0">
-                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
+                <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain"
+                    fetchpriority="high">
             </div>
 
             <!-- Back Button -->
             <div class="flex items-center">
                 <a href="menu.php" class="hover:scale-110 transition-transform flex items-center group">
-                    <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain">
+                    <img src="img/logos/volver.png" alt="Volver" class="h-10 md:h-12 object-contain"
+                        fetchpriority="high">
                 </a>
             </div>
         </div>
@@ -56,26 +58,25 @@ session_start();
     <section class="relative overflow-hidden min-h-[240px] md:min-h-[470px] flex items-end md:items-start">
         <!-- Imagen de fondo -->
         <img src="img/laboratorios/labodesc.jpg" alt="Laboratorio de análisis"
-            class="absolute inset-0 w-full h-full object-cover object-center">
+            class="absolute inset-0 w-full h-full object-cover object-center" fetchpriority="high">
 
         <!-- Overlay oscuro -->
         <div class="absolute inset-0 bg-teal-900/65"></div>
 
         <!-- Contenido -->
-        <div class="relative z-10 w-full px-2.5 md:px-16 pb-10 pt-28 md:pb-0 md:pt-56">
+        <div class="relative z-10 w-full px-2.5 md:px-16 pb-24 pt-28 md:pb-0 md:pt-56">
 
-            <div class="max-w-5xl mx-auto md:text-center">
+            <div class="max-w-5xl mx-auto text-center">
 
                 <span class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-3">
                     Área de Laboratorios
                 </span>
 
-                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-3 md:mb-5">
                     Laboratorios Químicos
                 </h2>
 
-                <p
-                    class="text-white text-base font-normal md:text-2xl leading-relaxed border-l-4 md:border-0 border-white pl-3 md:pl-0">
+                <p class="text-white text-base font-normal md:text-2xl leading-relaxed">
                     Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras
                     instalaciones virtuales y domina los protocolos de seguridad.
                 </p>
@@ -92,9 +93,9 @@ session_start();
             <!-- Química General -->
             <a href="quimica-general.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-                <img src="img/laboratorios/labo1.png" alt="Química General"
-                    class="w-full h-[400px] object-cover group-hover:scale-102 transition-transform duration-700"
-                    loading="lazy" decoding="async">
+                <img loading="lazy" src="img/laboratorios/labo1.png" alt="Química General"
+                    class="w-full h-[310px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Química General</h3>
@@ -105,9 +106,9 @@ session_start();
             <!-- Análisis Instrumental -->
             <a href="analisis-instrumental.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-                <img src="img/laboratorios/labo2.png" alt="Análisis Instrumental"
-                    class="w-full h-[400px] object-cover group-hover:scale-102 transition-transform duration-700"
-                    loading="lazy" decoding="async">
+                <img loading="lazy" src="img/laboratorios/labo2.png" alt="Análisis Instrumental"
+                    class="w-full h-[310px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Análisis Instrumental</h3>
@@ -118,9 +119,9 @@ session_start();
             <!-- Plantas Químicas -->
             <a href="plantas-quimicas.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-                <img src="img/laboratorios/labo3.png" alt="Plantas Químicas"
-                    class="w-full h-[400px] object-cover group-hover:scale-102 transition-transform duration-700"
-                    loading="lazy" decoding="async">
+                <img loading="lazy" src="img/laboratorios/labo3.png" alt="Plantas Químicas"
+                    class="w-full h-[310px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    decoding="async">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Plantas Químicas</h3>
@@ -131,9 +132,10 @@ session_start();
         </div>
     </main>
     <!-- FAQ Accordion -->
-    <section class="py-24 bg-gray-50 px-6">
-        <div class="max-w-7xl mx-auto space-y-6">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center uppercase">Información Detallada</h2>
+    <section class="py-2 md:py-16 bg-gray-50 px-10 md:px-48">
+        <div class="max-w-8xl mx-auto space-y-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-10 text-center uppercase">Algunas preguntas
+                frecuentes</h2>
 
             <!-- Question 1 -->
             <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
@@ -211,7 +213,7 @@ session_start();
     </section>
 
     <!-- FOOTER -->
-    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #5c886c;">
         <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
             <div class="text-center">
                 <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Contacto</h4>

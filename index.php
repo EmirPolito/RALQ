@@ -46,7 +46,7 @@
         }
     </style>
     <!-- Preload hero image -->
-    <link rel="preload" as="image" href="img/cerrar-cientifico-vistiendo-mascarilla.jpg">
+    <link rel="preload" as="image" href="img/Hero.NEW.jpg">
 </head>
 
 
@@ -101,14 +101,12 @@
     <!-- Hero -->
     <section class="hero relative w-full h-screen">
         <!-- Imagen de fondo -->
-        <img src="img/cerrar-cientifico-vistiendo-mascarilla.jpg" alt="Imagen de fondo"
-            class="w-full h-full object-cover imagen-hero" fetchpriority="high" decoding="sync">
+        <img src="img/hero1.png" alt="Imagen de fondo" class="w-full h-full object-cover imagen-hero"
+            fetchpriority="high" decoding="sync">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/50 overlay"></div>
 
         <!-- TEXTO SOBRE LA IMAGEN HERO -->
-        <!-- Contenido del hero -->
-        <!-- Contenido del hero -->
         <div class="contenido-hero absolute inset-0 flex flex-col justify-start md:justify-center items-center text-center
     px-8 md:px-16
     pt-[30vh] md:pt-0
@@ -216,8 +214,8 @@
         </section>
 
         <!-- Sección 1: Estructuras Moleculares -->
-        <section class="bg-[#434e4e] text-white">
-            <div class="max-w-[1400px] mx-auto px-6 py-20 lg:py-32">
+        <section class="bg-[#5c886c] text-white">
+            <div class="max-w-[1400px] mx-auto px-6py-20 lg:py-32">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     <!-- Texto -->
@@ -255,7 +253,7 @@
                                 </div>
                                 <div>
                                     <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">Interacción Total</h3>
-                                    <p class="text-gray-200 text-base lg:text-lg leading-relaxed">Manipula cada átomo y
+                                    <p class="text-white text-base lg:text-lg leading-relaxed">Manipula cada átomo y
                                         enlace para entender la química desde adentro.</p>
                                 </div>
                             </div>
@@ -271,7 +269,7 @@
                                 </div>
                                 <div>
                                     <h3 class="text-xl lg:text-2xl font-bold text-white mb-1">Fidelidad Científica</h3>
-                                    <p class="text-gray-400 text-base lg:text-lg leading-relaxed">Modelos validados para
+                                    <p class="text-white text-base lg:text-lg leading-relaxed">Modelos validados para
                                         una representación exacta de las geometrías moleculares.</p>
                                 </div>
                             </div>
@@ -287,7 +285,8 @@
 
                         <!-- Viewer -->
                         <model-viewer src="modelos/cafeina.glb" alt="Cafeína" auto-rotate camera-controls ar
-                            style="width:100%; height:420px; background:transparent;" class="lg:h-[560px]">
+                            style="width:100%; height:420px; background:transparent;; --poster-color: transparent;"
+                            class="lg:h-[560px]">
                         </model-viewer>
 
                         <!-- Badge -->
@@ -317,7 +316,8 @@
 
                         <!-- Viewer -->
                         <model-viewer src="modelos/gradilla.glb" alt="Gradilla" auto-rotate camera-controls ar
-                            style="width:100%; height:420px; background:transparent;" class="lg:h-[560px]">
+                            style="width:100%; height:420px; background:transparent;; --poster-color: transparent;"
+                            class="lg:h-[560px]">
                         </model-viewer>
 
                         <!-- Badge -->
@@ -393,7 +393,7 @@
         </section>
 
         <!-- Sección 3: Multimedia - VIDEOS MÁS HACIA LOS LADOS -->
-        <section class="bg-gray-100 py-20 lg:py-40 px-2 lg:px-8">
+        <section class="bg-white py-20 lg:py-40 px-2 lg:px-20">
             <!-- max-w más amplio para que ocupe más espacio horizontal -->
             <div class="max-w-[1600px] mx-auto space-y-32">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -402,8 +402,7 @@
                             class="w-full aspect-video object-cover"></video>
                     </div>
                     <div class="space-y-8 text-center lg:text-left">
-                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Acelera tu <span
-                                class="text-teal-600">Aprendizaje</span></h3>
+                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Acelera tu Aprendizaje</h3>
                         <div class="space-y-6">
                             <div
                                 class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
@@ -427,8 +426,7 @@
                             class="w-full aspect-video object-cover"></video>
                     </div>
                     <div class="lg:order-1 space-y-8 text-center lg:text-left">
-                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Confianza en el <span
-                                class="text-teal-600">Laboratorio</span></h3>
+                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Confianza en el laboratorio</h3>
                         <div class="space-y-6">
                             <div
                                 class="flex items-center justify-center lg:justify-start gap-4 text-xl lg:text-2xl text-gray-700">
@@ -447,7 +445,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #434e4e;">
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #5c886c;">
 
         <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
 

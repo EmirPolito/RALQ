@@ -2,7 +2,7 @@
 :root {
   --verdeclaro: #9cc2a9;
   --verdeobscuro: #60806b;
-  --gris: #9D9D9D;
+  --gris: #9d9d9d;
   --gris-claro: #9cc2a9;
   --blanco: #ffffff;
   --negro: #000000;
@@ -13,7 +13,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -24,7 +26,7 @@ body {
   background-color: #ffffff;
   margin: 0;
   padding: 0;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 /*-------------------SECCIÓN HERO-------------------*/
@@ -101,7 +103,7 @@ body {
 .novedades h2 {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--verdeclaro) ;
+  color: var(--verdeclaro);
 }
 
 .carrusel-track {
@@ -164,24 +166,29 @@ body {
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-100% / 1.5)); } /* Funciona mejor con el track duplicado */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 1.5));
+  } /* Funciona mejor con el track duplicado */
 }
 
 /* Ajuste específico para laptop para que la animación coincida con el ancho mayor */
 @media (min-width: 1024px) {
   @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-348px * 6)); } /* (300px + 3rem) * 6 */
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-348px * 6));
+    } /* (300px + 3rem) * 6 */
   }
 }
 
 .carrusel-container:hover .carrusel-track {
   animation-play-state: paused;
 }
-
-
-
 
 /*-------------------NUEVA SECCIÓN DE TEXTO E IMAGEN-------------------*/
 .texto-imagen {
@@ -213,7 +220,7 @@ body {
   display: flex;
   align-items: center;
   padding: 3rem;
-} 
+}
 
 .tex-img .tex {
   flex: 1;
@@ -269,21 +276,22 @@ body {
 /* Responsivo */
 @media (max-width: 768px) {
   .tex-img {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
   }
 
-  .tex, .img {
-      max-width: 100%;
+  .tex,
+  .img {
+    max-width: 100%;
   }
 
   .tex h2 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
 
   .tex p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
 
@@ -354,7 +362,7 @@ body {
   .video-contenido {
     margin-bottom: 2rem;
   }
-  
+
   .info-video {
     text-align: center;
   }
@@ -395,7 +403,9 @@ body {
     text-align: center;
   }
 
-  .contactos, .colaboradores, .imagen-footer {
+  .contactos,
+  .colaboradores,
+  .imagen-footer {
     max-width: 100%;
     padding: 1rem 0;
   }
@@ -404,7 +414,6 @@ body {
     margin: 0 auto;
   }
 }
-
 
 /*-------------------ESTILOS RESPONSIVOS-------------------*/
 @media (max-width: 768px) {
@@ -486,6 +495,3 @@ body {
     font-size: 1.2rem;
   }
 }
-
-
-
