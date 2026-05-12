@@ -101,46 +101,40 @@ session_start();
         </div>
     </header>
 
-    <section class="relative overflow-hidden min-h-[240px] md:min-h-[470px] flex items-end md:items-start">
+    <section class="relative overflow-hidden min-h-[250px] md:min-h-[430px] flex items-center md:items-start">
         <!-- Imagen de fondo -->
         <img src="img/fondomenu.png" alt="Laboratorio de análisis"
             class="absolute inset-0 w-full h-full object-cover object-center">
-
-        <!-- Overlay oscuro -->
         <div class="absolute inset-0"></div>
 
-        <!-- Contenido -->
-        <div class="relative z-10 w-full px-2.5 md:px-16 pb-10 pt-28 md:pb-0 md:pt-56">
-
-            <div class="max-w-5xl mx-auto md:text-center">
-
-                <span class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-3">
+        <!-- Contenido de la imagen -->
+        <div class="relative z-10 w-full px-4 md:px-16 pb-12 pt-8 md:pb-0 md:pt-56">
+            <div class="max-w-5xl mx-auto text-center">
+                <span class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-1">
                     Explora las areas de RALQ
                 </span>
-
-                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-1">
                     Aprende y Estudia sobre...
                 </h2>
 
-                <p
-                    class="text-white text-base font-normal md:text-2xl leading-relaxed border-l-4 md:border-0 border-white pl-3 md:pl-0">
+                <p class="text-white text-base font-normal md:text-2xl leading-relaxed">
                     Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras
                     instalaciones virtuales y domina los protocolos de seguridad.
                 </p>
-
             </div>
         </div>
     </section>
 
 
     <!-- MAIN -->
-    <main class="flex-grow py-20 px-10">
+    <main class="flex-grow py-32 px-10">
 
-        <div class="max-w-[1250px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-20">
+        <div
+            class="max-w-[1330px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 md:gap-x-24 gap-y-24">
 
             <!-- CARD -->
             <a href="estructuras-mol.php"
-                class="group relative bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                class="group relative bg-white rounded-[4rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 
                 <img src="img/img-menu/3 (2).png" alt="Estructuras Moleculares"
                     class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
