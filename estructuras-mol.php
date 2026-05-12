@@ -88,8 +88,6 @@ session_start();
     <!-- Content -->
     <main class="flex-grow py-20 px-6 bg-white">
         <div class="max-w-[1500px] mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 uppercase tracking-wider">Elige
-                una para visualizarla</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-14">
 

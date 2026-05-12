@@ -66,7 +66,8 @@ session_start();
                 </div>
 
                 <img src="img/laboratorios/labo-q-analisis.jpg" alt="Laboratorio de análisis"
-                    class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96" fetchpriority="high" decoding="sync">
+                    class="relative rounded-2xl shadow-sm object-cover w-full h-80 md:h-96" fetchpriority="high"
+                    decoding="sync">
             </div>
         </div>
         <!-- Texto -->
@@ -90,7 +91,6 @@ session_start();
 
 
     <main>
-        <h2 style="text-align:center; margin-bottom: 2rem;">ELIGE UNO PARA VISUALIZARLO</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-14">
             <!-- Autoclave -->
             <div
