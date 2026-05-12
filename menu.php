@@ -134,9 +134,9 @@ session_start();
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
 
-                    <p class="text-white text-2xl font-bold">
+                    <!-- <p class="text-white text-2xl font-bold">
                         Explorar Estructuras
-                    </p>
+                    </p> -->
 
                 </div>
             </a>
@@ -152,9 +152,9 @@ session_start();
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
 
-                    <p class="text-white text-2xl font-bold">
+                    <!-- <p class="text-white text-2xl font-bold">
                         Visitar Laboratorios
-                    </p>
+                    </p> -->
 
                 </div>
             </a>
@@ -170,9 +170,9 @@ session_start();
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
 
-                    <p class="text-white text-2xl font-bold">
+                    <!-- <p class="text-white text-2xl font-bold">
                         Ver Elementos
-                    </p>
+                    </p> -->
 
                 </div>
             </a>
@@ -188,9 +188,9 @@ session_start();
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
 
-                    <p class="text-white text-2xl font-bold">
+                    <!-- <p class="text-white text-2xl font-bold">
                         Ver Video RA
-                    </p>
+                    </p> -->
 
                 </div>
             </a>
@@ -207,9 +207,9 @@ session_start();
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
 
-                    <p class="text-white text-2xl font-bold">
+                    <!-- <p class="text-white text-2xl font-bold">
                         Evaluar Conocimientos
-                    </p>
+                    </p> -->
 
                 </div>
             </a>
@@ -225,9 +225,9 @@ session_start();
                 <div
                     class="absolute inset-0 bg-black/5 group-hover:bg-black/5 transition-all duration-500 flex items-end p-8">
 
-                    <p class="text-white text-2xl font-bold">
+                    <!-- <p class="text-white text-2xl font-bold">
                         Actividades Lúdicas
-                    </p>
+                    </p> -->
 
                 </div>
             </a>
