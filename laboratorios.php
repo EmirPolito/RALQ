@@ -83,13 +83,14 @@ session_start();
     <!-- Content -->
     <main class="flex-grow py-24 px-10 bg-white">
 
-        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-20">
+        <div
+            class="max-w-[1330px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 md:gap-x-24 gap-y-24">
 
             <!-- Química General -->
             <a href="quimica-general.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img loading="lazy" src="img/laboratorios/labo1.png" alt="Química General"
-                    class="w-full h-[310px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    class="w-full h-[305px] object-cover group-hover:scale-102 transition-transform duration-700"
                     decoding="async">
                 <!-- <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
@@ -102,7 +103,7 @@ session_start();
             <a href="analisis-instrumental.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img loading="lazy" src="img/laboratorios/labo2.png" alt="Análisis Instrumental"
-                    class="w-full h-[310px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    class="w-full h-[305px] object-cover group-hover:scale-102 transition-transform duration-700"
                     decoding="async">
                 <!-- <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
@@ -115,7 +116,7 @@ session_start();
             <a href="plantas-quimicas.php"
                 class="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 <img loading="lazy" src="img/laboratorios/labo3.png" alt="Plantas Químicas"
-                    class="w-full h-[310px] object-cover group-hover:scale-102 transition-transform duration-700"
+                    class="w-full h-[305px] object-cover group-hover:scale-102 transition-transform duration-700"
                     decoding="async">
                 <!-- <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">

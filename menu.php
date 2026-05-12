@@ -110,8 +110,8 @@ session_start();
                 </h2>
 
                 <p class="text-white text-base font-normal md:text-2xl leading-relaxed">
-                    Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras
-                    instalaciones virtuales y domina los protocolos de seguridad.
+                    Espacios de experimentación y descubrimiento. Explora nuestras
+                    instalaciones virtuales y aprende sin un laboratorio real.
                 </p>
             </div>
         </div>
