@@ -55,30 +55,25 @@ session_start();
     </header>
 
 
-    <section class="relative overflow-hidden min-h-[240px] md:min-h-[470px] flex items-end md:items-start">
+    <section class="relative overflow-hidden min-h-[250px] md:min-h-[430px] flex items-end md:items-start">
         <!-- Imagen de fondo -->
         <img src="img/laboratorios/labodesc.jpg" alt="Laboratorio de análisis"
             class="absolute inset-0 w-full h-full object-cover object-center" fetchpriority="high" decoding="sync">
-
-        <!-- Overlay oscuro -->
         <div class="absolute inset-0 bg-teal-900/65"></div>
 
-        <!-- Contenido -->
-        <div class="relative z-10 w-full px-2.5 md:px-16 pb-24 pt-28 md:pb-0 md:pt-56">
-
+        <!-- Contenido de la imagen -->
+        <div class="relative z-10 w-full px-2.5 md:px-16 pb-32 pt-28 md:pb-0 md:pt-56">
             <div class="max-w-5xl mx-auto text-center">
-
-                <span class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-3">
+                <span
+                    class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-1 sm:mb-1">
                     Área de Laboratorios
                 </span>
-
-                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-3 md:mb-5">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-1 sm:mb-1">
                     Laboratorios Químicos
                 </h2>
-
                 <p class="text-white text-base font-normal md:text-2xl leading-relaxed">
                     Espacios de experimentación y descubrimiento donde la ciencia cobra vida. Explora nuestras
-                    instalaciones virtuales y domina los protocolos de seguridad.
+                    instalaciones virtuales y domina la química.
                 </p>
 
             </div>

@@ -33,37 +33,36 @@ session_start();
     <!-- HEADER -->
     <header id="mainHeader"
         class="bg-white border-b border-gray-100 px-4 md:px-8 py-5 md:py-7 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
-
         <div class="max-w-[1460px] mx-auto flex justify-between items-center gap-2">
 
             <!-- Logo -->
             <div class="flex items-center flex-shrink-0">
-
                 <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
-
             </div>
 
-            <!-- Right -->
-            <div class="flex items-center gap-3 md:gap-8">
+            <!-- mover logos izquierda -->
+            <div class="flex items-center gap-9 sm:gap-20">
+                <div class="flex items-center gap-3 sm:gap-6">
 
-                <!-- Welcome + Socials -->
-                <div class="hidden sm:flex items-center gap-3 md:gap-4">
+                    <div class="flex gap-7 sm:gap-10">
 
-                    <div class="flex gap-2">
-
-                        <a href="#" class="hover:opacity-70 transition-opacity">
-                            <img src="img/contctos/logofacebook.png"
-                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61563746413453"
+                            class="hover:opacity-90 transition-opacity">
+                            <img src="img/contctos/facebook.svg"
+                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover"
+                                alt="Facebook">
                         </a>
 
-                        <a href="#" class="hover:opacity-70 transition-opacity">
-                            <img src="img/contctos/logowhats.png"
-                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="WhatsApp">
+                        <a href="https://chat.whatsapp.com/HGGxXfwclFBEQBHr2clRLm"
+                            class="hover:opacity-90 transition-opacity">
+                            <img src="img/contctos/whatsapp.svg"
+                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover"
+                                alt="WhatsApp">
                         </a>
 
-                        <a href="#" class="hover:opacity-70 transition-opacity">
-                            <img src="img/contctos/logogmail.png"
-                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="Gmail">
+                        <a href="mailto:ralq.utsv@gmail.com" class="hover:opacity-90 transition-opacity">
+                            <img src="img/contctos/gmail.svg"
+                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover" alt="Gmail">
                         </a>
 
                     </div>
@@ -71,9 +70,8 @@ session_start();
 
                 <!-- USER -->
                 <div class="relative user-menu flex-shrink-0">
-
-                    <img src="img/user.jpg"
-                        class="user-icon w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-teal-500 cursor-pointer shadow-lg object-cover"
+                    <img src="img/usuario.png"
+                        class="user-icon w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-grey-800 cursor-pointer shadow-lg object-cover"
                         onclick="toggleMenu()" alt="Usuario">
 
                     <!-- DROPDOWN -->
@@ -82,18 +80,11 @@ session_start();
 
                         <p class="text-gray-900 font-bold mb-4 truncate"
                             title="<?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>">
-
                             <?php echo isset($_SESSION['user_email']) ? htmlspecialchars($_SESSION['user_email']) : 'Invitado'; ?>
-
                         </p>
-
                         <a href="index.php"
-                            class="block w-full py-1 bg-red-600 text-white text-center rounded-2xl font-bold hover:bg-red-500 transition-colors">
-
-                            Salir
-
+                            class="block w-full py-1 bg-red-600 text-white text-center rounded-2xl font-bold hover:bg-red-500 transition-colors">Salir
                         </a>
-
                     </div>
                 </div>
 
@@ -110,10 +101,11 @@ session_start();
         <!-- Contenido de la imagen -->
         <div class="relative z-10 w-full px-4 md:px-16 pb-12 pt-8 md:pb-0 md:pt-56">
             <div class="max-w-5xl mx-auto text-center">
-                <span class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-1">
+                <span
+                    class="inline-block text-white font-normal tracking-[0.18em] uppercase text-xs md:text-lg mb-1 sm:mb-1">
                     Explora las areas de RALQ
                 </span>
-                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-1">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight mb-1 sm:mb-1">
                     Aprende y Estudia sobre...
                 </h2>
 
@@ -131,7 +123,6 @@ session_start();
 
         <div
             class="max-w-[1330px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 md:gap-x-24 gap-y-24">
-
             <!-- CARD -->
             <a href="estructuras-mol.php"
                 class="group relative bg-white rounded-[4rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
