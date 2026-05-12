@@ -94,7 +94,7 @@ session_start();
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Química General</h3>
-                    <p class="text-teal-300 font-medium uppercase tracking-widest text-sm">Entrar al Laboratorio</p>
+                    <p class="text-white font-medium uppercase tracking-widest text-sm">Entrar al Laboratorio</p>
                 </div>
             </a>
 
@@ -107,7 +107,7 @@ session_start();
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Análisis Instrumental</h3>
-                    <p class="text-teal-300 font-medium uppercase tracking-widest text-sm">Explorar Instrumentos</p>
+                    <p class="text-white font-medium uppercase tracking-widest text-sm">Explorar Instrumentos</p>
                 </div>
             </a>
 
@@ -120,7 +120,7 @@ session_start();
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
                     <h3 class="text-3xl font-bold text-white mb-2">Plantas Químicas</h3>
-                    <p class="text-teal-300 font-medium uppercase tracking-widest text-sm">Visitar Plantas</p>
+                    <p class="text-white font-medium uppercase tracking-widest text-sm">Visitar Plantas</p>
                 </div>
             </a>
 
