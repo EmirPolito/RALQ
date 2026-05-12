@@ -49,20 +49,20 @@ session_start();
                         <a href="https://www.facebook.com/profile.php?id=61563746413453"
                             class="hover:opacity-90 transition-opacity">
                             <img src="img/contctos/facebook.svg"
-                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover"
+                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full object-cover"
                                 alt="Facebook">
                         </a>
 
                         <a href="https://chat.whatsapp.com/HGGxXfwclFBEQBHr2clRLm"
                             class="hover:opacity-90 transition-opacity">
                             <img src="img/contctos/whatsapp.svg"
-                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover"
+                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full object-cover"
                                 alt="WhatsApp">
                         </a>
 
                         <a href="mailto:ralq.utsv@gmail.com" class="hover:opacity-90 transition-opacity">
                             <img src="img/contctos/gmail.svg"
-                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover" alt="Gmail">
+                                class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full object-cover" alt="Gmail">
                         </a>
 
                     </div>

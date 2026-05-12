@@ -62,34 +62,7 @@
                 <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
             </div>
 
-            <!-- Right -->
-            <div class="flex items-center gap-3 md:gap-8">
-                <!-- Welcome + Socials -->
-                <div class="hidden sm:flex items-center gap-3 md:gap-4">
-
-                    <div class="flex gap-2">
-
-                        <a href="#" class="hover:opacity-70- transition-opacity">
-                            <img src="img/contctos/logofacebook.png"
-                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="Facebook">
-                        </a>
-
-                        <a href="#" class="hover:opacity-70 transition-opacity">
-                            <img src="img/contctos/logowhats.png"
-                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="WhatsApp">
-                        </a>
-
-                        <a href="#" class="hover:opacity-70 transition-opacity">
-                            <img src="img/contctos/logogmail.png"
-                                class="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="Gmail">
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
-
     </header>
 
 
