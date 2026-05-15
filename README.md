@@ -37,7 +37,7 @@ La plataforma se organiza en diferentes secciones educativas para cubrir distint
 - **Análisis Instrumental (`analisis-instrumental.php`):** Conocimiento de las herramientas avanzadas utilizadas en los laboratorios.
 - **Plantas Químicas (`plantas-quimicas.php`):** Introducción a los procesos a escala industrial.
 
-## Fundadores
+## Creadores
 
 Este proyecto fue ideado, diseñado y desarrollado por:
 
