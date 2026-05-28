@@ -21,11 +21,11 @@ El objetivo principal de RALQ es acercar la ciencia a los estudiantes, eliminand
 El proyecto ha sido desarrollado utilizando las siguientes herramientas para asegurar rendimiento, accesibilidad y un diseño moderno:
 
 - **Frontend:** HTML5, CSS3, y JavaScript.
-- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) para un diseño responsivo y a medida.
+- **Estilos:** Tailwind CSS para un diseño responsivo y a la medida.
 - **Backend/Enrutamiento:** PHP para la estructuración de páginas, gestión de módulos y sesiones.
-- **Visualización 3D y RA:** [`<model-viewer>`](https://modelviewer.dev/) de Google, utilizado para renderizar las moléculas y equipos de laboratorio en 3D con soporte nativo para Realidad Aumentada en móviles.
+- **Visualización 3D y RA:** Modelviewer de Google, utilizado para renderizar las moléculas y equipos de laboratorio en 3D con soporte nativo para Realidad Aumentada en móviles.
 
-## 📂 Estructura y Módulos
+## Estructura y Módulos
 
 La plataforma se organiza en diferentes secciones educativas para cubrir distintas áreas de aprendizaje:
 
@@ -37,10 +37,10 @@ La plataforma se organiza en diferentes secciones educativas para cubrir distint
 - **Análisis Instrumental (`analisis-instrumental.php`):** Conocimiento de las herramientas avanzadas utilizadas en los laboratorios.
 - **Plantas Químicas (`plantas-quimicas.php`):** Introducción a los procesos a escala industrial.
 
-## Creadores
+## Desarrolladores
 
 Este proyecto fue ideado, diseñado y desarrollado por:
 
-- **Emir Polito Guevara**
-- **Irving Esteban Molina Méndez**
-- **Cristian Daniel Barraza Hernández**
+- **Emir Polito** - Frontend & QA Tester
+- **Irving Mendez** - UI/UX Designer
+- **Cristian Barraza** - Project Manager
