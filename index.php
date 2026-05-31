@@ -24,7 +24,7 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
     <style>
-        /* Estilos para el carrusel infinito en desktop */
+        /* ── Carrusel infinito (novedades) ── */
         @media (min-width: 1024px) {
             .carrusel-track {
                 animation: scroll-infinite 20s linear infinite;
@@ -44,154 +44,227 @@
                 transform: translateX(-33.333%);
             }
         }
+
+        /* ── Carrusel2 (imagen con flechas) ── */
+        .c2-track {
+            display: flex;
+            transition: transform 0.45s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .c2-slide {
+            flex: 0 0 100%;
+            min-width: 0;
+        }
+
+        .c2-slide img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        /* Flechas Carrusel2 */
+        .c2-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            padding: 0;
+            transition: opacity .2s;
+        }
+
+        .c2-btn:hover {
+            opacity: .6;
+        }
+
+        .c2-btn:focus {
+            outline: none;
+        }
+
+        /* Dots */
+        .c2-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background: #d1d5db;
+            transition: background .25s, width .25s;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .c2-dot.active {
+            background: #5c886c;
+            width: 24px;
+        }
+
+        /* Animación fade-in general */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
+        }
     </style>
     <!-- Preload hero image -->
     <link rel="preload" as="image" href="img/Hero.NEW.jpg">
 </head>
 
-
-
 <body class="relative">
-    <!-- Header flotante ancho completo -->
+
+    <!-- ══════════════════════════════════
+         HEADER
+    ══════════════════════════════════ -->
     <header id="mainHeader"
         class="bg-white border-b border-gray-100 px-4 md:px-8 py-5 md:py-7 sticky top-0 z-50 shadow-sm transition-transform duration-300 ease-in-out">
         <div class="max-w-[1500px] mx-auto flex justify-between items-center gap-2">
-
-            <!-- Logo -->
             <div class="flex items-center flex-shrink-0">
                 <img src="img/logo_ralq_color-removebg-preview.png" alt="RALQ Logo" class="h-12 md:h-16 object-contain">
             </div>
-
         </div>
     </header>
 
-
-
-    <!-- Hero -->
+    <!-- ══════════════════════════════════
+         HERO
+    ══════════════════════════════════ -->
     <section class="hero relative w-full h-screen">
-        <!-- Imagen de fondo -->
         <img src="img/hero1.png" alt="Imagen de fondo" class="w-full h-full object-cover imagen-hero"
             fetchpriority="high" decoding="sync">
-        <!-- Overlay -->
         <div class="absolute inset-0 bg-black/50 overlay"></div>
 
-        <!-- TEXTO SOBRE LA IMAGEN HERO -->
-        <div class="contenido-hero absolute inset-0 flex flex-col justify-start md:justify-center items-center text-center
-    px-8 md:px-16
-    pt-[30vh] md:pt-0
-    fade-in">
+        <div class="contenido-hero absolute inset-0 flex flex-col justify-start lg:justify-start items-center text-center
+    px-8 md:px-16 pt-[30vh] lg:pt-[27vh] fade-in">
 
             <h1 class="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-6 drop-shadow-2xl leading-tight"
-                style="font-family: 'Poppins', sans-serif;">
+                style="font-family:'Poppins',sans-serif;">
                 Visualiza instrumentos y moleculas en Realidad Aumentada.
             </h1>
-
             <p
                 class="text-xl md:text-2xl lg:text-3xl text-gray-200 drop-shadow-md max-w-3xl mb-8 font-light leading-relaxed">
                 Descubre una experiencia educativa inmersiva con Realidad Aumentada de última generación.
             </p>
-
             <a href="menu.php"
                 class="px-10 py-5 bg-white text-black rounded-full font-semibold text-lg transition-all shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
                 ¡Empieza a usar la app!
             </a>
-
         </div>
     </section>
 
     <script>
-        // Efecto de ocultar/mostrar header según scroll
         let lastScroll = 0;
         const header = document.getElementById('floating-header');
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-
-            if (currentScroll > lastScroll && currentScroll > 50) {
-                // Scroll hacia abajo → ocultar
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                // Scroll hacia arriba → mostrar
-                header.style.transform = 'translateY(0)';
+            if (header) {
+                header.style.transform = currentScroll > lastScroll && currentScroll > 50
+                    ? 'translateY(-100%)' : 'translateY(0)';
             }
             lastScroll = currentScroll;
         });
     </script>
 
-
-
-
+    <!-- ══════════════════════════════════
+         MAIN
+    ══════════════════════════════════ -->
     <main class="contenido-principal overflow-x-hidden">
-        <!-- Sección de Novedades (Carousel) - CARRUSEL INFINITO -->
+
+        <!-- ── Novedades (carrusel infinito) ── -->
         <section class="novedades fade-in text-center py-12 md:py-24 bg-white">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-10 uppercase tracking-[0.2em]">Novedades</h2>
             <div class="carrusel-container relative w-full overflow-hidden">
-                <!-- Items triplicados para loop infinito en desktop -->
                 <div class="carrusel-track flex items-center">
-                    <!-- Set 1 -->
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel1.png" alt="Novedad 1" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Descubre tus laboratorios</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel2.png" alt="Novedad 2" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Infinidad de instrumentos RA</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel3.png" alt="Novedad 3" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Tus conocimientos aumentarán</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel4.png" alt="Novedad 4" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Solo usa tu smartphone</p>
-                    </div>
-                    <!-- Set 2 (duplicado para loop infinito) -->
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel1.png" alt="Novedad 1" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Descubre tus laboratorios</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel2.png" alt="Novedad 2" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Infinidad de instrumentos RA</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel3.png" alt="Novedad 3" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Tus conocimientos aumentarán</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel4.png" alt="Novedad 4" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Solo usa tu smartphone</p>
-                    </div>
-                    <!-- Set 3 (duplicado para loop infinito) -->
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel1.png" alt="Novedad 1" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Descubre tus laboratorios</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel2.png" alt="Novedad 2" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Infinidad de instrumentos RA</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel3.png" alt="Novedad 3" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Tus conocimientos aumentarán</p>
-                    </div>
-                    <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
-                        <img src="img/carrusel/carrusel4.png" alt="Novedad 4" class="!h-[100px] md:!h-[200px]">
-                        <p class="!text-[0.9rem] md:!text-[1.6rem]">Solo usa tu smartphone</p>
-                    </div>
+                    <?php
+                    $items = [
+                        ['src' => 'img/carrusel/carrusel1.png', 'alt' => 'Novedad 1', 'txt' => 'Descubre tus laboratorios'],
+                        ['src' => 'img/carrusel/carrusel2.png', 'alt' => 'Novedad 2', 'txt' => 'Infinidad de instrumentos RA'],
+                        ['src' => 'img/carrusel/carrusel3.png', 'alt' => 'Novedad 3', 'txt' => 'Tus conocimientos aumentarán'],
+                        ['src' => 'img/carrusel/carrusel4.png', 'alt' => 'Novedad 4', 'txt' => 'Solo usa tu smartphone'],
+                    ];
+                    // Triplicar para loop infinito
+                    for ($set = 0; $set < 3; $set++):
+                        foreach ($items as $item): ?>
+                            <div class="carta !min-w-[120px] !max-w-[140px] md:!min-w-[250px] md:!max-w-[300px]">
+                                <img src="<?= htmlspecialchars($item['src']) ?>" alt="<?= htmlspecialchars($item['alt']) ?>"
+                                    class="!h-[100px] md:!h-[200px]">
+                                <p class="!text-[0.9rem] md:!text-[1.6rem]"><?= htmlspecialchars($item['txt']) ?></p>
+                            </div>
+                        <?php endforeach;
+                    endfor; ?>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 1: Estructuras Moleculares -->
+
+        <!-- ══════════════════════════════════
+            Imagen
+        ══════════════════════════════════ -->
+        <section class="fade-in w-full pt-10 pb-20 lg:pt-4 lg:pb-36 bg-white">
+            <div class="mx-auto max-w-[1400px] px-6 lg:px-13">
+
+                <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.2fr] items-center gap-12 lg:gap-16">
+
+                    <!-- Texto -->
+                    <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+
+                        <span class="inline-block rounded-full bg-blue-50 px-6 py-3 text-lg font-medium text-black">
+                            Exploración Científica
+                        </span>
+
+                        <h2 class="mt-5 leading-tight">
+                            <span class="block text-4xl font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+                                Descubre una mejor
+                            </span>
+
+                            <span class="block text-4xl font-bold tracking-tight text-black md:text-5xl lg:text-6xl">
+                                forma de aprender química
+                            </span>
+                        </h2>
+
+                        <p class="mt-7 max-w-3xl text-base  text-gray-600 lg:text-[15px]">
+                            Explora instrumentos, materiales y recursos educativos
+                            mediante una experiencia visual interactiva diseñada para
+                            facilitar el aprendizaje científico.
+                        </p>
+
+                    </div>
+
+                    <!-- Imagen -->
+                    <div class="w-full flex justify-center lg:justify-center pl-10 md:pl-16 lg:pl-0">
+
+                        <div class="overflow-hidden rounded-2xl h-[250px] md:h-[350px] lg:h-[450px]">
+
+                            <img src="img/tabla.png" alt="Tabla periódica" class="h-full w-full object-cover">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- ── Sección 1: Estructuras Moleculares ── -->
         <section class="bg-[#5c886c] text-white">
-            <div class="max-w-[1400px] mx-auto px-6py-20 lg:py-32">
+            <div class="max-w-[1400px] mx-auto px-6 py-20 lg:py-32">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     <!-- Texto -->
                     <div class="flex flex-col gap-10 lg:pr-8">
-                        <!-- Eyebrow -->
                         <span
-                            class="inline-flex items-center gap-2 self-center lg:self-start text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full bg-white border border-teal-500/20 text-black">
+                            class="inline-flex items-center gap-2 self-center lg:self-start text-xs font-semibold
+                                     tracking-widest uppercase px-4 py-2 rounded-full bg-white border border-teal-500/20 text-black">
                             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                 stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -200,16 +273,12 @@
                             Química Interactiva
                         </span>
 
-                        <!-- Título -->
                         <div class="text-center lg:text-left">
                             <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
-                                style="font-family:'Poppins',sans-serif;">
-                                Estructuras en 3D
-                            </h2>
+                                style="font-family:'Poppins',sans-serif;">Estructuras en 3D</h2>
                             <div class="mt-4 w-16 h-1 bg-white rounded-full mx-auto lg:mx-0"></div>
                         </div>
 
-                        <!-- Features -->
                         <div class="flex flex-col gap-8">
                             <div
                                 class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
@@ -247,21 +316,16 @@
 
                     <!-- Modelo 3D -->
                     <div class="relative flex justify-center items-center">
-                        <!-- Glow de fondo -->
                         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-teal-500/10 blur-[80px]"></div>
                         </div>
-
-                        <!-- Viewer -->
                         <model-viewer src="modelos/cafeina.glb" alt="Cafeína" auto-rotate camera-controls ar
-                            style="width:100%; height:420px; background:transparent;; --poster-color: transparent;"
+                            style="width:100%;height:420px;background:transparent;--poster-color:transparent;"
                             class="lg:h-[560px]">
                         </model-viewer>
-
-                        <!-- Badge -->
                         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none whitespace-nowrap
-                    bg-[#0f172a]/80 backdrop-blur-xl border border-white/10
-                    px-5 py-2.5 rounded-2xl text-sm lg:text-base font-semibold text-white">
+                                    bg-[#0f172a]/80 backdrop-blur-xl border border-white/10
+                                    px-5 py-2.5 rounded-2xl text-sm lg:text-base font-semibold text-white">
                             Cafeína <span class="text-teal-400 ml-1.5">C₈H₁₀N₄O₂</span>
                         </div>
                     </div>
@@ -270,40 +334,34 @@
             </div>
         </section>
 
-
-        <!-- Sección 2: Instrumental RA -->
+        <!-- ── Sección 2: Instrumental RA ── -->
         <section class="bg-white text-gray-900">
             <div class="max-w-[1400px] mx-auto px-6 py-20 lg:py-32">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-                    <!-- Modelo 3D (izquierda en desktop, abajo en móvil) -->
+                    <!-- Modelo 3D (izquierda desktop / abajo móvil) -->
                     <div class="relative flex justify-center items-center order-last lg:order-none">
-                        <!-- Glow de fondo -->
                         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-teal-500/10 blur-[80px]"></div>
                         </div>
-
-                        <!-- Viewer -->
                         <model-viewer src="modelos/gradilla.glb" alt="Gradilla" auto-rotate camera-controls ar
-                            style="width:100%; height:420px; background:transparent;; --poster-color: transparent;"
+                            style="width:100%;height:420px;background:transparent;--poster-color:transparent;"
                             class="lg:h-[560px]">
                         </model-viewer>
-
-                        <!-- Badge -->
                         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none whitespace-nowrap
-                    bg-white shadow-lg border border-gray-100
-                    px-5 py-2.5 rounded-2xl text-sm lg:text-base font-semibold text-gray-900
-                    flex items-center gap-2.5">
+                                    bg-white shadow-lg border border-gray-100
+                                    px-5 py-2.5 rounded-2xl text-sm lg:text-base font-semibold text-gray-900
+                                    flex items-center gap-2.5">
                             <span class="w-2.5 h-2.5 rounded-full bg-teal-500 animate-pulse shrink-0"></span>
                             Gradilla UTSV
                         </div>
                     </div>
 
-                    <!-- Texto (derecha en desktop) -->
+                    <!-- Texto -->
                     <div class="flex flex-col gap-10 lg:pl-8">
-                        <!-- Eyebrow -->
                         <span
-                            class="inline-flex items-center gap-2 self-center lg:self-start text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full bg-teal-50 border border-teal-200 text-teal-700">
+                            class="inline-flex items-center gap-2 self-center lg:self-start text-xs font-semibold
+                                     tracking-widest uppercase px-4 py-2 rounded-full bg-teal-50 border border-teal-200 text-teal-700">
                             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                 stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -312,7 +370,6 @@
                             Realidad Aumentada
                         </span>
 
-                        <!-- Título -->
                         <div class="text-center lg:text-left">
                             <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
                                 style="font-family:'Poppins',sans-serif;">
@@ -321,7 +378,6 @@
                             <div class="mt-4 w-16 h-1 bg-teal-600 rounded-full mx-auto lg:mx-0"></div>
                         </div>
 
-                        <!-- Features -->
                         <div class="flex flex-col gap-8">
                             <div
                                 class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
@@ -361,10 +417,10 @@
             </div>
         </section>
 
-        <!-- Sección 3: Multimedia - VIDEOS MÁS HACIA LOS LADOS -->
+        <!-- ── Sección 3: Multimedia ── -->
         <section class="bg-white py-20 lg:py-40 px-2 lg:px-20">
-            <!-- max-w más amplio para que ocupe más espacio horizontal -->
             <div class="max-w-[1600px] mx-auto space-y-32">
+
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="rounded-[2.5rem] overflow-hidden shadow-2xl">
                         <video src="video/5752738-uhd_3840_2160_30fps.mp4" autoplay loop muted playsinline
@@ -410,62 +466,107 @@
                                 Gana seguridad antes de la práctica real.
                             </div>
                         </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
+
     </main>
 
-    <!-- FOOTER -->
-    <footer class="text-white py-16 px-6 md:px-24" style="background-color: #5c886c;">
+    <!-- ══════════════════════════════════
+         FOOTER
+    ══════════════════════════════════ -->
+    <footer class="text-white py-16 px-6 md:px-24" style="background-color:#5c886c;">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-16 items-start">
 
-        <div class="max-w-4xl mx-auto grid grid-cols-2 gap-8 md:gap-16 items-start">
-
+            <!-- Contacto -->
             <div class="text-center">
-
-                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">
-                    Contacto
-                </h4>
-
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Contacto</h4>
                 <p class="text-sm sm:text-base md:text-lg leading-relaxed">
-
-                    Facebook:
-                    <a href="#" class="hover:underline">RALQ</a><br>
-
-                    Correo:
-                    <a href="mailto:ralq.utsv@mail.com" class="hover:underline">
-                        ralq.utsv@mail.com
-                    </a><br>
-
-                    Teléfono:
-                    <a href="tel:+123456789" class="hover:underline">
-                        +123 456 789
-                    </a>
-
+                    Facebook: <a href="#" class="hover:underline">RALQ</a><br>
+                    Correo: <a href="mailto:ralq.utsv@mail.com" class="hover:underline">ralq.utsv@mail.com</a><br>
+                    Teléfono: <a href="tel:+123456789" class="hover:underline">+123 456 789</a>
                 </p>
             </div>
 
             <!-- Creadores -->
             <div class="text-center">
-
-                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">
-                    Creadores
-                </h4>
-
+                <h4 class="text-xl md:text-3xl font-bold mb-4 md:mb-6">Creadores</h4>
                 <p class="text-sm sm:text-base md:text-lg leading-relaxed">
                     Emir Polito Guevara<br>
                     Irving Esteban Molina Méndez<br>
                     Cristian Daniel Barraza Hernández
                 </p>
-
             </div>
 
         </div>
 
         <div class="border-t border-gray-400 mt-12"></div>
-
         <div class="mt-6 text-center text-lg text-gray-200">
             2024 &copy; Todos los derechos reservados.
         </div>
-
     </footer>
+
+    <!-- ══════════════════════════════════
+         JS: Carrusel 2
+    ══════════════════════════════════ -->
+    <script>
+        (function () {
+            const track = document.getElementById('c2-track');
+            const dots = document.querySelectorAll('#c2-dots .c2-dot');
+            const btnPrev = document.getElementById('c2-prev');
+            const btnNext = document.getElementById('c2-next');
+            const total = dots.length;
+            let current = 0;
+            let autoTimer = null;
+
+            function goTo(index) {
+                current = (index + total) % total;
+                track.style.transform = `translateX(-${current * 100}%)`;
+                dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            }
+
+            btnPrev.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+            btnNext.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    goTo(parseInt(dot.dataset.index));
+                    resetAuto();
+                });
+            });
+
+            // Swipe táctil
+            let touchStartX = 0;
+            const wrapper = document.getElementById('c2-wrapper');
+            wrapper.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+            wrapper.addEventListener('touchend', e => {
+                const diff = touchStartX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 40) { goTo(diff > 0 ? current + 1 : current - 1); resetAuto(); }
+            }, { passive: true });
+
+            // Auto-play
+            function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 3000); }
+            function resetAuto() { clearInterval(autoTimer); startAuto(); }
+
+            // Pausa al hacer hover
+            wrapper.addEventListener('mouseenter', () => clearInterval(autoTimer));
+            wrapper.addEventListener('mouseleave', startAuto);
+
+            startAuto();
+        })();
+    </script>
+
+    <!-- ── Fade-in con IntersectionObserver ── -->
+    <script>
+        (function () {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        })();
+    </script>
 
     <!-- Animaciones -->
     <script src="js/animaciones-index.js"></script>
