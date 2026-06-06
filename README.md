@@ -44,8 +44,11 @@ La plataforma se organiza en diferentes secciones educativas para cubrir distint
 ----
 
 ## Desarrolladores
-Este proyecto fue ideado, diseñado y desarrollado por:
 
-- **Emir Polito** - Frontend & QA Tester
-- **Irving Mendez** - UI/UX Designer
-- **Cristian Barraza** - Project Manager
+> **Emir Polito** - Frontend & QA Tester
+> <br>
+
+> **Irving Mendez** - UI/UX Designer
+> <br>
+
+> **Cristian Daniel** - Project Manage
