@@ -1,4 +1,4 @@
-<h1 align="center">RALQ</h1>
+<h1 align="center">RALQ Legacy</h1>
 
 <div align="center">
 
@@ -11,7 +11,7 @@
 
 </div>
 
-**El Proyecto RALQ** es una plataforma educativa interactiva diseñada para facilitar la enseñanza y el aprendizaje de la química. A través del uso de tecnologías web modernas, la plataforma ofrece a los estudiantes una forma innovadora de explorar conceptos químicos, permitiéndoles visualizar moléculas, instrumentos de laboratorio y estructuras de manera interactiva mediante **Modelos 3D** y **Realidad Aumentada (RA)**.
+**El Proyecto RALQ Legacy** es una plataforma educativa interactiva diseñada para facilitar la enseñanza y el aprendizaje de la química. A través del uso de tecnologías web modernas, la plataforma ofrece a los estudiantes una forma innovadora de explorar conceptos químicos, permitiéndoles visualizar moléculas, instrumentos de laboratorio y estructuras de manera interactiva mediante **Modelos 3D** y **Realidad Aumentada (RA)**.
 
 <img height="733" alt="ca77b83d-dce5-4eaf-84b1-a10ce6254494" src="https://github.com/user-attachments/assets/5ef7f452-957e-4d37-a7ba-898faca6d0ca" />
 <br>
