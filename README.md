@@ -1,4 +1,4 @@
-<h1 align="center">RALQ Legacy</h1>
+<h1 align="center">RALQ</h1>
 
 <div align="center">
 
